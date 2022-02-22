@@ -301,11 +301,43 @@ body{
 
 
 
-/* #dummy{
-    border: 3px solid blue;
-    margin-top: 30px;
-    height: 30px;
+/* NEWS GRID AREA */
+
+#newsGrid{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    /* border: 1px solid red; */
 }
- */
+
+/* #newsGrid > div{
+    border: 1px solid blue;
+} */
+
+.newsItem{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.newsImage{
+    width: 100%;
+}
+
+.newsImage:hover{
+    transition: all ease 1s;
+    transform: scale(1.1);
+}
+
+.newsText{
+    position: absolute;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    bottom: 2%;
+}
 
 

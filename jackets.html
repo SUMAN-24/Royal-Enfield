@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #topcontainer{
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 300px;
+            grid-gap: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="topcontainer"></div>
+</body>
+</html>
+
+<script src="./Scripts/jackets.js"></script>
+
+<script>
+    var jacketsDB = JSON.parse(localStorage.getItem("jacketsDB")) || [];
+
+    showData(jacketsDB);
+
+    function showData(data){
+        data.map(function(elem, index){
+            var pdiv = document.createElement("div");
+            var pimg = document.createElement("img");
+            pimg.setAttribute("src", elem.image_url);
+            pdiv.append(pimg);
+
+            document.querySelector("#topcontainer").append(pdiv);
+        })
+    }
+</script>
