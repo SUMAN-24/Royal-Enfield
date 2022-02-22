@@ -44,6 +44,7 @@ body{
 }
 .links > a:hover{
     color: #d1291c;
+    text-decoration: none;
 }
 #login{
     width: 10%;
