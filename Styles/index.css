@@ -65,6 +65,7 @@ body{
 
 #journeyDiv{
     width: 100%;
+    position: relative;
 }
 
 #journeyDiv > video{
@@ -72,7 +73,26 @@ body{
     height: 100%;
 }
 
+#downArrow{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    color: #ffffff;
+}
 
+#pauseBtn{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    color: #ffffff;
+    font-weight: light; 
+    cursor: pointer;
+}
+
+#play{
+    display: none;
+}
 /* TRIBUTE DIV */
 
 #tributeDiv{
