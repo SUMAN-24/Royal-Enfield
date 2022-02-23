@@ -20,9 +20,12 @@ body{
     justify-content: space-around;
     border: 2px solid red;
     /* position: fixed;
-    top: 0;
-    z-index: 1; */
+    top: 0; */
 }
+
+/* .main{
+    margin-top: 85px;
+} */
 
 #navbar > div{
     border: 1px solid blue;
@@ -82,9 +85,31 @@ body{
 }
 
 
+/*TOP CART PROPERTIES*/
+#topCart{
+    position: relative;
+}
+
+#totalCartItems{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #eb0b0b;
+    top: 0;
+    left: 50%;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+
 /* RIDING JACKET BANNER AREA */
 
 #bannerArea{
+    /* top: 85px; */
     position: relative;
 }
 
@@ -142,3 +167,134 @@ body{
 .currentPage{
     display: inline-block;
 }
+
+
+
+
+/* MAIN PRODUCT DISPLAY AREA */
+#topcontainer{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#totalResults{
+    width:80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#displayDiv{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 350px;
+    grid-gap: 20px;  
+    border: 1px solid red;
+}
+
+#displayDiv > div{
+    border: 1px solid blue;
+}
+
+.prodDiv{
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.prodInfoCart{
+    height: 40%;
+    position: absolute;
+    background-color: whitesmoke;
+    z-index: 2;
+    width: 100%;
+    font-size: 14px;
+    /* border: 1px solid red; */
+}
+
+.prodDiv:hover > .prodInfoCart{
+    top: 68%;
+}
+
+#displayDiv img{
+    width: 100%;
+    height: 80%;
+}
+
+.prodInfo{
+    height: 45%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* .prodInfo > div{
+    border: 1px solid blue;
+} */
+
+.prodName{
+    width: 60%;
+    font-weight: 600;
+}
+
+.prodPrice{
+    width: 30%;
+}
+
+.addCartArea{
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.cartIcon{
+    cursor: pointer;
+}
+
+.cartIcon:hover svg{
+    fill: black;
+}
+
+.sizeSelector{
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+}
+
+.size{
+    background-color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    height: 70%;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+/* .size:first-child{
+    pointer-events: none;
+} */
+
+/* .size:hover{
+    filter: invert(1);
+    border: 0px;
+    outline: 2px solid white;
+} */
+
+/* .sizeSelector */
+
+/* .sizeSelect{
+    width: 100px;
+    height: 25px;
+}
+
+.sizeSelect > optgroup{
+    font-size: 16px;
+} */
