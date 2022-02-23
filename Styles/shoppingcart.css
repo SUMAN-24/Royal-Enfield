@@ -1,0 +1,325 @@
+/* IMPORT GOOGLE FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0px;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+/* NAVBAR STYLING */
+#navbar{
+    width: 100%;
+    height: 85px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid red;
+    box-sizing: border-box;
+    /* position: fixed;
+    top: 0; */
+}
+
+/* .main{
+    padding-top: 85px;
+} */
+
+#navbar > div{
+    border: 1px solid blue;
+}
+
+#menu{
+    width: 5%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+#menu a, #menu a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+#logo{
+    width: 34%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: right;
+}
+
+#logo img{
+    filter: invert(1);
+}
+
+#userArea{
+    width: 20%;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.icons{
+    display: inline-block;
+    margin-left: 15px;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+.icontxt{
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    /* border: 1px solid blue; */
+}
+/* a.userAreaIcons{
+    
+} */
+
+#userArea>a, #userArea > a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+
+/*TOP CART PROPERTIES*/
+#topCart{
+    position: relative;
+}
+
+#totalCartItems{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #eb0b0b;
+    top: 0;
+    left: 50%;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+
+
+/* TOP HEADING BANNER */
+#topBanner{
+    width: 100%;
+    height: 80px;
+    background-color: whitesmoke;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+#topBanner h3{
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+
+/* MAIN BODY CONTAINER */
+
+#bodyContainer{
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+
+#bodyContainer > div{
+    border: 1px solid blue;
+}
+
+/* DISPLAY CART ITEMS DIV */
+
+#cartArea{
+    width: 65%;
+    box-sizing: border-box;
+}
+
+#cartContainer{
+    width: 100%;
+    /* height: 0px; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px;
+    grid-gap: 20px;
+    border: 1px solid green;
+}
+
+/* CART ITEM STYLES */
+.cartContainer > div{
+    box-sizing: border-box;
+}
+
+
+.cartItem{
+    /* width: 90%; */
+    margin: 10px;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.cartItem > div{
+    box-sizing: border-box;
+    border: 1px solid blue;
+}
+
+.cartImg{
+    width: 12%;
+    height: 100%;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.cartImg img{
+    width: 80%;
+    height: 80%;
+}
+
+.cartItemInfo{
+    width:40%;
+}
+
+.cartItemName{
+    width: 90%;
+    height: 60%;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid red;
+}
+
+.cartItemSize{
+    width: 90%;
+    height: 30%;
+    margin: auto;
+    margin-top: 10px;
+    border: 1px solid red;
+}
+
+.cartItemSize > select{
+    width: 40%;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.cartItemSize select option{
+    background: rgba(100, 100, 100, 0.3);;
+}
+
+.cartItemPrice{
+    width: 15%;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cartItemQty{
+    width: 15%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.addQty, .minusQty{
+    width: 20%;
+    cursor: pointer;
+}
+
+.qtyArea{
+    width: 40%;
+}
+
+.qtyArea input{
+    width: 80%;
+    font-size: 16px;
+    text-align: center;
+}
+
+.cartItemTotal{
+    width: 15%;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* PROMO AREA */
+#promoArea{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    border: 1px solid blue;
+}
+
+#promoBox{
+    width:65%;
+    margin-left: 10px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+#promoBtn{
+    width: 25%;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+}
+
+
+/* REMOVE BUTTON DIV */
+
+.removeItem{
+    margin: 10px;
+    margin-top: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 1px solid red;
+    font-weight: bold;
+}
+
+.removeItem i{
+    font-size: 18px;
+}
+
+.removeItem:hover{
+    cursor: pointer;
+    color: red;
+}
+
+/* DISPLAY TOTAL AREA STYLE */
+
+#totalArea{
+    width: 30%;
+    box-sizing: border-box;
+}
