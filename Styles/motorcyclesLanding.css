@@ -1,0 +1,128 @@
+/* IMPORTING GOOGLE FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+*{
+    margin: 0px;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* BODY AREA */
+
+#heading{
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: #212121; 
+}
+
+/* MAIN BIKE CONTAINER DIV */
+
+#bikeContainer{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    /* border: 1px solid red; */
+}
+
+/* #bikeContainer > div{
+    border: 1px solid blue;
+} */
+
+#bikeServices{
+    width: 25%;
+    height: 100%;
+}
+
+a.services{
+    display: block;
+    height: 60px;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    text-decoration: none;
+    border-bottom: 1px solid grey;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+a.services:hover{
+    text-decoration: none;
+    background-color: lightgray;
+}
+
+/* BIKE DISPLAY AREA - GRID 2x3 */
+
+#bikesDisplay{
+    width: 75%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 300px 300px;
+}
+
+#bikesDisplay > div{
+    /* border: 1px solid red; */
+}
+
+div.bikes{
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.bikeImg{
+    width: 100%;
+}
+
+.bikeExplore{
+    position: absolute;
+    background-color: #212121;
+    width: 100%;
+    height: 100px;
+    top: 83%;
+    text-align: center;
+    color: #ffffff;
+    box-sizing: border-box;
+    padding: 20px 15px;
+    /* border: 2px solid red; */
+    /* transform: translateY(65px);
+    transition: all ease .25s; */
+    /* transition: all .8s ease; */
+}
+
+.bikeName{
+    font-size: 18px;
+}
+
+a.bikeButton{
+    width: 38%;
+    margin: auto;
+    display: block;
+    border: 2px solid white;
+    text-decoration: none;
+    color: #ffffff;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px 30px;
+    font-size: 13px;
+}
+
+a.bikeButton:hover{
+    background-color: #ffffff;
+    color: #ef0531;
+}
+
+.bikes:hover > .bikeExplore{
+    top: 67%;
+}
