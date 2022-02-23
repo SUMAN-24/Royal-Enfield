@@ -70,9 +70,9 @@ a.services:hover{
     grid-template-rows: 300px 300px;
 }
 
-#bikesDisplay > div{
+/* #bikesDisplay > div{
     /* border: 1px solid red; */
-}
+
 
 div.bikes{
     overflow: hidden;
