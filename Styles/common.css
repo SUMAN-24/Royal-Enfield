@@ -29,10 +29,10 @@ html{
     /* padding-left: 30px; */
     /* padding-right: 30px; */
 }
-#logo{
+.logo{
     width: 15%
 }
-#logo > img{
+.logo > img{
     width: 90%;
     margin: auto;
 }
