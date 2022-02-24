@@ -20,7 +20,7 @@ body{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     display: flex;
     justify-content: space-around;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     box-sizing: border-box;
     /* position: fixed;
     top: 0; */
@@ -30,9 +30,9 @@ body{
     padding-top: 85px;
 } */
 
-#navbar > div{
+/* #navbar > div{
     border: 1px solid blue;
-}
+} */
 
 #menu{
     width: 5%;
@@ -135,12 +135,12 @@ body{
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
-#bodyContainer > div{
+/* #bodyContainer > div{
     border: 1px solid blue;
-}
+} */
 
 /* DISPLAY CART ITEMS DIV */
 
@@ -158,7 +158,7 @@ body{
     grid-template-rows: 200px;
     grid-auto-rows: 200px;
     grid-gap: 20px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 /* CART ITEM STYLES */
@@ -166,6 +166,9 @@ body{
     box-sizing: border-box;
 }
 
+.cartItemData{
+    border-bottom: 1px solid grey;
+}
 
 .cartItem{
     /* width: 90%; */
@@ -173,7 +176,8 @@ body{
     height: 60%;
     display: flex;
     justify-content: space-between;
-    border: 1px solid red;
+    border-bottom: 1px solid grey;
+    /* border: 1px solid red; */
     /* display: flex;
     justify-content: center;
     align-items: center; */
@@ -181,7 +185,7 @@ body{
 
 .cartItem > div{
     box-sizing: border-box;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 .cartImg{
@@ -211,7 +215,7 @@ body{
     padding: 5px;
     font-size: 14px;
     font-weight: bold;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .cartItemSize{
@@ -219,7 +223,7 @@ body{
     height: 30%;
     margin: auto;
     margin-top: 10px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .cartItemSize > select{
@@ -277,7 +281,7 @@ body{
     justify-content: space-between;
     width: 100%;
     height: 50px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 #promoBox{
@@ -321,7 +325,7 @@ body{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-weight: bold;
 }
 
@@ -360,7 +364,7 @@ body{
     margin-top: 10px;
     box-sizing: border-box;
     padding: 5px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 #summary{
@@ -371,6 +375,7 @@ body{
 .totalText{
     display: flex;
     justify-content: space-between;
+    border-bottom: 0.5px solid grey;
 }
 
 #finalTotal{

@@ -27,11 +27,16 @@ function showCartsTotalItems(item){
     if(count==0){
         document.querySelector("#totalCartItems").style.display = "none";
         document.querySelector("#totalArea").style.display = "none";
+        document.querySelector("#cartArea").style.display = "none";
+        var msg = document.createElement("h1");
+        msg.innerText = "Your Cart is Empty!";
+        document.querySelector("#bodyContainer").append(msg);
     }
     else{
         document.querySelector("#totalCartItems").style.display = "block";
         document.querySelector("#totalCartItems").innerText = count;
         document.querySelector("#totalArea").style.display = "block";
+        document.querySelector("#cartArea").style.display = "block";
     }
 }
 
@@ -199,6 +204,7 @@ function increaseQuantity(index, totalDisplayArea, userQty){
         }
         else{
             cartDataDB[index].quantity = newQty;
+            userQty.value++;
             totalDisplayArea.innerText = "Rs. " + cartDataDB[index].price * cartDataDB[index].quantity;
         }
     }
@@ -206,6 +212,8 @@ function increaseQuantity(index, totalDisplayArea, userQty){
     // console.log(cartDataDB);
 
     localStorage.setItem("cartDataDB", JSON.stringify(cartDataDB));
+
+    showTotal(cartDataDB)
 }
 
 
@@ -218,17 +226,20 @@ function reduceQuantity(index, totalDisplayArea, userQty){
 
     var current_qty = cartDataDB[index].quantity; 
     
-    var newQty = current_qty - Number(userQty.value);;
+    var newQty = current_qty - 1;
+
+    console.log(current_qty, newQty);
     //cartDataDB[index].quantity += Number(userQty.value);
-    if(newQty==0){
+    if(newQty==-1){
         alert("Item quantity 0, Increase quantity to buy item");
-        cartDataDB[index].quantity = newQty;
-        userQty.value = "1";
+        cartDataDB[index].quantity = 0;
+        userQty.value = "0";
         totalDisplayArea.innerText = "Rs. " + cartDataDB[index].price * cartDataDB[index].quantity;
         }
     else{
         // userQty.value = newQty;
         cartDataDB[index].quantity = newQty;
+        userQty.value--;
         totalDisplayArea.innerText = "Rs. " + cartDataDB[index].price * cartDataDB[index].quantity;
     }
 
@@ -236,6 +247,8 @@ function reduceQuantity(index, totalDisplayArea, userQty){
     // console.log(cartDataDB);
 
     localStorage.setItem("cartDataDB", JSON.stringify(cartDataDB));
+
+    showTotal(cartDataDB)
 }
 
 
@@ -250,6 +263,8 @@ function removeItemFromCart(index){
     showCartsTotalItems(cartDataDB);
 
     localStorage.setItem("cartDataDB", JSON.stringify(cartDataDB));
+
+    showTotal(cartDataDB)
 }
 
 
@@ -262,23 +277,24 @@ var correctPromo = "royalenfield";
 function applyPromo(){
     var userPromo = document.querySelector("#promoBox").value;
     var promoMsgArea = document.querySelector("#promoApplyMsg");
+
+    var total = cartDataDB.reduce(function(acc, elem){
+        return acc + (elem.price * elem.quantity);
+    }, 0);
+
+    var discountedTotal = total;
     if(userPromo === correctPromo){
         promoMsgArea.innerText = "Congratulations! Promo code applied successfully. -30% discount!";
         promoMsgArea.style.fontWeight = "bold";
         promoMsgArea.style.color = "green";
-
-        var total = cartDataDB.reduce(function(acc, elem){
-            return acc + (elem.price * elem.quantity);
-        }, 0);
-
         
-        var discountedTotal = Math.floor(total * 0.7);
+        discountedTotal = Math.floor(total * 0.7);
         var discount = Math.floor(total*0.3);
 
         document.querySelector("#discountText").innerText = "- Rs." + discount;
         document.querySelector("#discountText").style.color = "green";
+        document.querySelector("#discountText").style.fontWeight = "bold";
 
-        document.querySelector("#finalTotalText").innerText = "Rs." + discountedTotal;
 
         console.log(total, discountedTotal);
         localStorage.setItem("promoApplied", JSON.stringify("true"));
@@ -288,8 +304,12 @@ function applyPromo(){
         promoMsgArea.style.fontWeight = "bold";
         promoMsgArea.style.color = "red";
         document.querySelector("#discountText").innerText = "- Rs." + 0;
+        document.querySelector("#discountText").style.color = "black";
+        document.querySelector("#discountText").style.fontWeight = "normal";
         localStorage.setItem("promoApplied", JSON.stringify("false"));
     }
+
+    document.querySelector("#finalTotalText").innerText = "Rs." + discountedTotal;
 }
 
 

@@ -153,6 +153,19 @@
             quantity: 1,
         }
 
+        // Checking if product already in cart
+        var flag = 0;
+        var curr_index = -1;
+        for(var i in cartDataDB){
+            if(cartDataDB[i].name == newCartData.name && cartDataDB[i].size == newCartData.size){
+                flag = 1;
+                curr_index = i;
+                break;
+            }
+        }
+
+        
+
         console.log(newCartData);
 
         cartDataDB.push(newCartData);
