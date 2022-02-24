@@ -20,41 +20,50 @@
                     <input type="text" name="" id="" placeholder="Email*">
                     <p>Your don't have account? <a href="">Register now</a> or <a href="">Continue as guest.</a></p>
                 </div> -->
-                <div class="bannerHeader">SHIPPING ADDRESS</div>
-                <form action="" class="address">
-                    <div class="name">
-                        <input type="text" name="" id="firstName"  placeholder="First Name*">
-                        <input type="text" name="" id="lastName"  placeholder="Last Name*">
+                <div class="sections">
+                    <div class="bannerHeader">
+                        <h3>SHIPPING ADDRESS</h3>
                     </div>
-                    <input type="text" name="" id="address1" placeholder="Address 1*"><br>
-                    <input type="text" name="" id="address2" placeholder="Address 2*">
-                    <div class="name">
-                        <input type="text" name="" id="city" placeholder="City*">
-                        <input type="text" name="" id="state" placeholder="State/Provice*">
-                        <input type="text" name="" id="country" placeholder="Country*" value="India" disabled>
+                    <form action="" class="address" id="shippingAddress ">
+                        <div class="name">
+                            <input type="text" name="" id="firstName"  placeholder="First Name*">
+                            <input type="text" name="" id="lastName"  placeholder="Last Name*">
+                        </div>
+                        <input type="text" name="" id="address1" placeholder="Address 1*"><br>
+                        <input type="text" name="" id="address2" placeholder="Address 2*">
+                        <div class="area">
+                            <input type="text" name="" id="city" placeholder="City*">
+                            <input type="text" name="" id="state" placeholder="State/Provice*">
+                            <input type="text" name="" id="country" placeholder="Country*" value="India" disabled>
+                        </div>
+                        <input type="number" name="" id="mobile" placeholder="Mobile*"><br>
+                        <input type="number" name="" id="pin" placeholder="Enter PIN Code"><br>
+                        <input type="submit" value="NEXT" id="addnext">
+                    </form>
+                </div>
+                
+                <div class="sections">
+                    <div class="bannerHeader">
+                        <h3>SHIPPING METHOD</h3>
                     </div>
-                    <input type="text" name="" id="" placeholder="Mobile*"><br>
-                    <input type="text" name="" id=""><br>
-                    <input type="submit" value="NEXT" id="addnext">
-                </form>
-    
-                <button>SHIPPING METHOD</button>
-                <div class="method">
-                    <div class="prepaid">
-                        <input type="radio" name="" id="">
-                        <span>Fixed shipping</span>
-                        <p>Prepaid Orders</p>
-                        <p>₹0.00</p>
-                    </div>
-                    <div class="cod">
-                        <input type="radio" name="Fixed shipping" id="" value="">
-                        <span>Fixed shipping</span>
-                        <p>COD Orders</p>
-                        <p>₹50.00</p>
+                    <div class="method">
+                        <div class="prepaid">
+                            <p>
+                                - Fixed Shipping (Prepaid Orders) - &nbsp; &nbsp; Rs. 0
+                            </p>
+                        </div>
+                        <div class="cod">
+                            <p>
+                               - Fixed Shipping (COD Orders) - &nbsp; &nbsp; Rs. 50
+                            </p>
+                        </div>
                     </div>
                 </div>
                 
-                <button>PAYMENT METHOD</button>
+                <div class="sections">
+                    <div class="bannerHeader">
+                        <h3>PAYMENT METHOD</h3>
+                    </div>
                 <div class="payment">
                     <div class="payment_option">
                         <div class="card-option">
@@ -67,10 +76,10 @@
                         <form action="" id="payment-info">
                             <div class="card-input">
                                 <label for="">Card Number</label><br>
-                                <input type="text" name="" id=""><br>
+                                <input type="number" name="" id="cardNo"><br>
                                 <label for="">Expiration Date</label>
                                 <div>
-                                    <select name="" id="">
+                                    <select name="" id="expmonth">
                                         <option value="">Month</option>
                                         <option value="1">01 - January</option>
                                         <option value="2">02 - February</option>
@@ -85,7 +94,7 @@
                                         <option value="11">11 - November</option>
                                         <option value="12">12 - December</option>
                                     </select>
-                                    <select name="" id="">
+                                    <select name="" id="expyear">
                                         <option value="">Year</option>
                                         <option value="2022">2022</option>
                                         <option value="2023">2023</option>
@@ -99,14 +108,16 @@
                                     </select>
                                 </div>
                                 <label for="">Name On Card</label><br>
-                                <input type="text"><br>
+                                <input type="text" id="cardName"><br>
                                 <label for="">CVV</label><br>
-                                <input type="text">
-                                <input type="submit" name="" id="submit" value="CONFIRM ORDER">
+                                <input type="number" id="cvv">
+                                <input type="submit" name="" id="paymentBtn" value="CONFIRM ORDER">
                             </div>
                         </form>
                     </div>
                 </div>
+                </div>
+                
             </div>
            
 
@@ -120,8 +131,12 @@
                         <p id="totalText">0</p>
                     </div>
                     <div class="totalText">
-                        <p>Discount</p>
+                        <p>Discount (Promo Code) </p>
                         <p id="discountText">- Rs. 0</p>
+                    </div>
+                    <div class="totalText">
+                        <p>Shipping Cost</p>
+                        <p id="shippingText">Rs. 0</p>
                     </div>
                     <div id="finalTotal" class="totalText">
                         <p>Order Total</p>
@@ -213,3 +228,6 @@
 
 </body>
 </html>
+
+
+<script src="./Scripts/payment.js"></script>

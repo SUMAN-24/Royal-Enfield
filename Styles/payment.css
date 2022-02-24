@@ -50,24 +50,34 @@ body{
 } */
 /* SHIPPING ADDRESS */
 
-.bannerHeader{
-    width: 90%;
-    margin: auto;
-    background-color: red;
-    color: white;
-    text-align: center;
-}
+
 .checkout{
     width: 95%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
+
+.sections{
+    width: 90%;
+    margin: auto;
+    border: 2px solid blue;
+}
+.bannerHeader{
+    width: 95%;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #ef0531;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px
+}
 .address{
-    width: 92%;
-    margin-left: 10px;
+    width: 95%;
+    margin: auto;
     padding: 20px;
-    margin: 0%;
-   
 }
 .address>input{
     height: 35px;
@@ -77,56 +87,71 @@ body{
     padding-left: 10px;
 }
 .name{
+    width: 100%;
+    margin: auto;
     display: flex;
     justify-content: space-between;
 }
 .name>input{
     display: inline-block;
-    width: 50%;
+    width: 45%;
     height: 35px;
-    margin: 10px 10px 0 0;
+    margin-top: 10px;
     font-size: 16px;
     padding-left: 10px;
 }
-.name>select{
-    width: 50%;
-    height: 42px;
-    margin: 10px 10px 0 0;
+
+.area{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.area > input{
+    width: 30%;
+    display: inline-block;
+    height: 35px;
+    margin-top: 10px;
     font-size: 16px;
     padding-left: 10px;
 }
+
+
+
 #addnext{
     width: 15%;
     background-color: #000;
     color: white;
+    cursor: pointer;
 }
-button{
-    background-color: red;
-    border: 0px;
-    width: 91%;
-    height: 45px;
-    margin: 0 0 0 20px;
-}
+
+
 /* SHIPPING METHOD */
 .method{
     width: 92%;
     padding: 20px;
     margin: 0;
 }
-.prepaid{
+.method p{
+    font-weight: bold;
+}
+/* .prepaid{
     display: flex;
 }
 .cod{
     display: flex;
     justify-content: space-between;
-}
+} */
 /* card type */
 .payment{
-    padding: 20px;
-    display: flex;
+    width: 95%;
     margin: auto;
+    display: flex;
     height: 450px;
-    padding-left: 0px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid red;
 }
 .payment_option{
     width: 100%;
@@ -181,14 +206,27 @@ button{
     padding: 10px 5px 0 5px;
 }
 
-#submit{
+#paymentBtn{
     width: 98%;
     height: 45px;
     background: #000;
     color: white;
+    font-size: 16px;
+    cursor: pointer;
     border: 1px solid #000;
 }
 
+.card-input > input{
+    font-size: 16px;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.card-input select{
+    font-size: 16px;
+    padding: 5px;
+    padding-left: 10px;
+}
 /* bill details */
 .item-deatil{
     width: 90%;
@@ -196,6 +234,16 @@ button{
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
     border-radius: 5px;
+}
+
+.card_input label{
+    font-weight: bold;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
 
