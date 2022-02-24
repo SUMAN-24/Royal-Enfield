@@ -21,7 +21,9 @@ body::-webkit-scrollbar-thumb
     width: 90%;
     background-color: rgb(229,227,227);
     margin: auto;
-    margin-top: 150px;
+    margin-top: 290px;
+    /* margin-bottom: 200px; */
+    padding-bottom: 70px;
 }
 .nav
 {
@@ -51,6 +53,12 @@ img
     padding: 10px 50px;
     gap: 80px;
 }
+#genF,#genM,#ownY,#ownN
+{
+    margin-right: 8px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
 #inpt>div>div>input
 {
     width: 100%;
@@ -73,6 +81,11 @@ select
 h1
 {
     text-align: center;
+    font-weight: 700px;
+}
+#gend
+{
+    margin-bottom: 10px;
 }
 .gen>p
 {
@@ -107,7 +120,6 @@ p,span,input,button{
     height: 30px;
     width :30px;
     margin-right: 10px;
-    
 }
 .humanV>div
 {
@@ -191,48 +203,48 @@ button,.createA,.gen>div>input
     cursor: pointer;
 }
 
-@media all and (max-width:700px)
-            {
-                #inpt>div
+@media all and (max-width:767px)
+    {
+             #inpt>div
                 {
                     display: grid;
                     grid-template-columns: repeat(1,1fr);
                     grid-template-rows: repeat(2,0px);
                 }
-                .orSignUp
+            .orSignUp
                 {
                         display: grid;
                         grid-template-columns:   repeat(1,1fr);
                         row-gap: 10px;
                 }
-                .orSignUp>button,.logI,.createA
+             .orSignUp>button,.logI,.createA
                     {
                         width: 95%;
                     }
-                    #inpt>div
+             #inpt>div
                     {
                         height: 140px; 
                      }  
 
-                     .signupCont
-                           {
-                                  width: 101%;
-                                  background-color: rgb(229,227,227);
-                                 margin-top: 150px;
+            .signupCont
+                     {
+                         width: 101%;
+                        background-color: rgb(229,227,227);
+                        margin-top: 150px;
 
-                             }
+                    }
                     
-.createA,.logI
-{
-    color:white;
-    background-color: black;
-}
-.cond
-{
-    margin-top: -80px;
-}
-.humanV
-{
-    margin-bottom: -50px;
-}
-            }
+             .createA,.logI
+                     {
+                           color:white;
+                          background-color: black;
+                    }
+             .cond
+                   {
+                         margin-top: -80px;
+                   }
+            .humanV
+                {
+                      margin-bottom: -50px;
+                }
+       }
