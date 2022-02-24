@@ -183,11 +183,11 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 #filterDiv > div{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     box-sizing: border-box;
     padding: 10px;
     height: 100%;
@@ -237,8 +237,24 @@ body{
     font-size: 18px;
 }
 
+#reset{
+    width: 10%;
+}
 
+#resetFilters{
+    width: 90%;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    cursor: pointer;
+    height: 30px;
+    font-weight: bold;
+}
 
+#resetFilters:hover{
+    filter: invert(1);
+}
 
 /* MAIN PRODUCT DISPLAY AREA */
 #topcontainer{
@@ -478,6 +494,11 @@ a.order, a.order:hover{
     color: white;
     font-weight: bold;
     font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#keeptouch > p:nth-child(2){
+    margin-bottom: 10px;
 }
 
 #copyrightText{

@@ -5,6 +5,7 @@
 
     var cart_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="grey" class="bi bi-cart-fill" viewBox="0 0 16 16"> <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/> </svg>';
 
+    var jacketsCopyDB = jacketsDB;
    
     showData(jacketsDB);
 
@@ -24,7 +25,13 @@
 
     function showData(data){
         document.querySelector("#displayDiv").innerHTML = "";
-        document.querySelector("#totalResults").innerText = "Showing "+data.length+" results.";
+        if(data.length==0){
+            document.querySelector("#totalResults").innerText = "No items found."
+        }
+        else{
+            document.querySelector("#totalResults").innerText = "Showing "+data.length+" results.";         
+        }
+        // document.querySelector("#totalResults").innerText = "Showing "+data.length+" results.";
         //console.log(data);
         data.map(function(elem, index){
             
@@ -181,12 +188,195 @@
     }
 
 
-    // {
-//     name: "KHARDUNGLA V2 JACKET-OLIVE",
-//     image_url: "https://store.royalenfield.com/media/catalog/product/i/m/img_9115_1.jpg?width=275&height=275&canvas=275:275&quality=80&bg-color=255,255,255",
-//     price: "12950.00"
-//   },
 
-    // var a = document.createElement("p");
-    // a.innerHTML = icon;
-    // document.querySelector("#totalResults").append(a);
+
+
+/* SORTING & FILTERING AREA */
+
+
+/* FUNCTION TO RESET ALL FILTER */
+
+// Resetting Filters
+
+document.querySelector("#resetFilters").addEventListener("click", resetFilters);
+
+function resetFilters(event){
+    document.querySelector("#sorter").value = "--";
+    document.querySelector("#filterSize").value = "--";
+    document.querySelector("#filterPrice").value = "--";
+
+    jacketsDB = JSON.parse(localStorage.getItem("jacketsDB")) || [];
+
+    showData(jacketsDB);
+}
+
+/* FUNCTION TO APPLY FILTERS */
+
+// var filteredCartData = cartDataDB;
+
+document.querySelector("#sorter").addEventListener("change", applyFilters);
+document.querySelector("#filterSize").addEventListener("change", applyFilters);
+document.querySelector("#filterPrice").addEventListener("change", applyFilters);
+
+function applyFilters(event){
+    var rangeFilterSelected = document.querySelector("#filterPrice").value;
+    var sizeFilterSelected = document.querySelector("#filterSize").value;
+    var sortBy = document.querySelector("#sorter").value;
+
+    sortData(sortBy);
+    filterByRange(rangeFilterSelected);
+    filterBySize(sizeFilterSelected);
+};
+
+
+
+/* SORTING FUNCTION */
+
+function sortData(data){
+    var sortBy = data;
+    if(sortBy != "--"){
+        if(sortBy == "pLTH"){
+            jacketsDB.sort(function(a,b){
+                return a.price - b.price;
+            })
+        }
+        else if(sortBy == "pHTL"){
+            jacketsDB.sort(function(a,b){
+                return b.price - a.price;
+            })
+        }
+        else if(sortBy == "nAZ"){
+            jacketsDB.sort(function(a,b){
+                var nameA = a.name.trim().toLowerCase(); //removing case-sensitivity
+                var nameB = b.name.trim().toLowerCase();
+    
+                if(nameA < nameB){
+                    return -1; // <0 a placed before b ===> sorting in ascending order
+                }
+                if(nameA > nameB){
+                    return 1; // >0 place b before a
+                }
+    
+                // names must be equal
+                return 0;
+            })
+        }
+        else if(sortBy == "nZA"){
+            jacketsDB.sort(function(a,b){
+                var nameA = a.name.trim().toLowerCase(); //removing case-sensitivity
+                var nameB = b.name.trim().toLowerCase();
+    
+                if(nameA < nameB){
+                    return 1;
+                }
+                if(nameA > nameB){
+                    return -1; 
+                }
+    
+                // names must be equal
+                return 0;
+            })
+        }
+        jacketsCopyDB = jacketsDB;
+        showData(jacketsDB);
+    }
+
+    // filteredJacketsData = jacketsDB;
+    //console.log(filteredJacketsData);
+    
+}
+
+
+
+/* FILTER FUNCTION TO DISPLAY DATA BY RANGE */
+
+
+function filterByRange(data){
+    var rangeSelected = data;
+    var upperLimit = 0;
+    var lowerLimit = 0;
+    var maxPriceValue = 0;
+    //var filteredPriceData = jacketsCopyDB;
+    //console.log(filteredJacketsData);
+    // //Finding max price Value
+    jacketsDB.forEach(function(elem, index){
+        if(elem.price > maxPriceValue){
+            maxPriceValue = elem.price;
+        }
+    });
+
+    // Conditions For Range
+    if(rangeSelected != "--"){
+        if(rangeSelected=="1000"){
+            upperLimit = 1000;
+            lowerLimit = 0;
+        }
+        else if(rangeSelected=="2000"){
+            upperLimit = 2000;
+            lowerLimit = 1001;
+        }
+        else if(rangeSelected=="5000"){
+            upperLimit = 5000;
+            lowerLimit = 2001;
+        }
+        else if(rangeSelected=="10000"){
+            upperLimit = 10000;
+            lowerLimit = 5001;
+        }
+        else if(rangeSelected=="11000"){
+            upperLimit = maxPriceValue;
+            lowerLimit = 10001;
+        }
+        
+    
+        var filteredPriceData = jacketsCopyDB.filter(function(elem, index){
+            if(elem.price >= lowerLimit && elem.price<=upperLimit){
+                return elem;
+            }
+        })
+
+        console.log(filteredPriceData);
+        showData(filteredPriceData);
+        //jacketsCopyDB = filteredPriceData;
+        // console.log("After Range Function");
+        // console.log(filteredJacketsData);
+
+        // console.log(filteredPriceData);
+        // filteredJacketsData = filteredPriceData;
+
+        // showData(filteredJacketsData);
+    }
+    
+    
+};
+
+
+function filterBySize(data){
+    var sizeFilter = data;
+    // var copyData = filteredJacketsData;
+    // console.log("sizeFilter is " + sizeFilter);
+    // console.log(filteredJacketsData);
+    
+
+    if(sizeFilter!="--"){
+        var sizeFilteredData = jacketsCopyDB.filter(function(elem, index){
+            if(elem.size[sizeFilter]>1){
+                return elem;
+            }
+        });
+
+        jacketsCopyDB = sizeFilteredData;
+
+        showData(jacketsCopyDB);
+    }
+
+    
+    // console.log("After filtering size");
+    // console.log(sizeFilteredData);
+
+    // filteredJacketsData = sizeFilteredData;
+
+    // showData(filteredJacketsData);
+
+}
+
