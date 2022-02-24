@@ -1,10 +1,12 @@
 var signUpDataArray=JSON.parse(localStorage.getItem("signUpdataBase")) || [];
+                
 
 document.querySelector("#form").addEventListener("submit",function(event)
 {
     event.preventDefault(event)
     var obj={};
 
+    // console.log(document.querySelector(".firNam").value)
 
     var fname=document.querySelector(".firNam")
         obj.Fname=fname.value
@@ -13,8 +15,9 @@ document.querySelector("#form").addEventListener("submit",function(event)
         obj.Lastname=Lnam.value
 
 
-        var GenM=document.querySelector(".genM")
-        var GenF=document.querySelector(".genF")
+
+        var GenM=document.querySelector("#genM")
+        var GenF=document.querySelector("#genF")
 
                 if(GenM.checked == true)
                     {                                       
@@ -40,8 +43,8 @@ document.querySelector("#form").addEventListener("submit",function(event)
         var phone=document.querySelector(".phon")
         obj.Mobile=phone.value
 
-         var ownYY=document.querySelector(".ownY")
-        var ownNN=document.querySelector(".ownN")
+         var ownYY=document.querySelector("#ownY")
+        var ownNN=document.querySelector("#ownN")
                   if(ownYY.checked==true)
                      {
                          obj.ownOrNot="Yes";
