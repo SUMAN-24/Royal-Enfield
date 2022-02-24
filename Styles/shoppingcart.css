@@ -287,6 +287,11 @@ body{
     padding: 10px;
 }
 
+#promoBox:focus{
+    outline: 2px solid #027bff;
+    border: 0px;
+}
+
 #promoBtn{
     width: 25%;
     margin-right: 10px;
@@ -294,6 +299,16 @@ body{
     background-color: #000;
     color: #fff;
     font-size: 18px;
+}
+
+#promoMsg{
+    margin: 10px;
+    margin-top: 10px;
+}
+
+#promoApplyMsg{
+    color: #444444;
+    font-size: 14px;;
 }
 
 
@@ -319,9 +334,72 @@ body{
     color: red;
 }
 
+/*SHIPPING AREA DIV*/
+#shippingInfo{
+    margin: 5px;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
 /* DISPLAY TOTAL AREA STYLE */
 
 #totalArea{
     width: 30%;
+    height: 400px;
     box-sizing: border-box;
+}
+
+#totalDisplayArea{
+    width: 95%;
+    margin: auto;
+    height: 200px;
+}
+
+#totalDisplayArea > div{
+    width: 100%;
+    margin-top: 10px;
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid blue;
+}
+
+#summary{
+    background-color: #b8b8b8;
+    font-weight: bold;
+}
+
+.totalText{
+    display: flex;
+    justify-content: space-between;
+}
+
+#finalTotal{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+#totalArea button{
+    display: block;
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    border: 0px;
+    cursor: pointer;
+}
+
+#totalArea i{
+    font-size: 18px;
+}
+
+#continueBtn{
+    background-color: black;
+}
+
+#checkoutBtn{
+    background-color: red;
 }

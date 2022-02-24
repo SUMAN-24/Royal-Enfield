@@ -12,8 +12,12 @@ var minusIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" 
 
 var plusIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16"> <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/> <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/> </svg>'
 
-var crossIcon = '<i class="fa-solid fa-xmark"></i>'
+var crossIcon = '<i class="fa-solid fa-xmark"></i>';
 
+localStorage.setItem("promoApplied", JSON.stringify("false"));
+
+
+showTotal(cartDataDB);
 
 showCartsTotalItems(cartDataDB);
 
@@ -22,16 +26,19 @@ function showCartsTotalItems(item){
     // console.log(count);
     if(count==0){
         document.querySelector("#totalCartItems").style.display = "none";
+        document.querySelector("#totalArea").style.display = "none";
     }
     else{
         document.querySelector("#totalCartItems").style.display = "block";
         document.querySelector("#totalCartItems").innerText = count;
+        document.querySelector("#totalArea").style.display = "block";
     }
 }
 
 showData(cartDataDB);
 
 function showData(data){
+    document.querySelector("#cartContainer").innerHTML = "";
     data.map(function(elem, index){
         /* CART ITEM MASTER DIV which will append to main Cart container*/
         var cartItemDataDiv = document.createElement("div");
@@ -106,7 +113,7 @@ function showData(data){
         var itemQtyBox = document.createElement("input");
         itemQtyBox.setAttribute("type", "number");
         itemQtyBox.setAttribute("class", "itemQty");
-        itemQtyBox.setAttribute("value", "1");
+        itemQtyBox.setAttribute("value", elem.quantity);
         itemQtyBox.setAttribute("min", "0");
         itemQtyBox.setAttribute("max", "10");
         qtyAreaDiv.append(itemQtyBox)
@@ -149,7 +156,9 @@ function showData(data){
         var removeBtnDiv = document.createElement("div");
         removeBtnDiv.setAttribute("class", "removeBtn");
         removeBtnDiv.innerHTML = "Remove " + crossIcon;
-
+        removeBtnDiv.addEventListener("click", function(){
+            removeItemFromCart(index);
+        })
         removeItemDiv.append(removeBtnDiv);
          
 
@@ -174,12 +183,15 @@ function updateSize(index, newSize){
 
 function increaseQuantity(index, totalDisplayArea, userQty){
     //cartDataDB = JSON.parse(localStorage.getItem("cartDataDB")) || [];
+    userQty.style.outline = "3px solid green";
+    userQty.style.border = "0px";
     var current_qty = cartDataDB[index].quantity; 
     if(current_qty == 10){
         alert("Maximum limit reached");
     }
     else{
         var newQty = current_qty + Number(userQty.value);;
+        // userQty.value = newQty;
         //cartDataDB[index].quantity += Number(userQty.value);
         if(newQty>10){
             alert("Stock Limit Reached, Reduce quantity");
@@ -190,6 +202,104 @@ function increaseQuantity(index, totalDisplayArea, userQty){
             totalDisplayArea.innerText = "Rs. " + cartDataDB[index].price * cartDataDB[index].quantity;
         }
     }
-    console.log("new qty", newQty);
+    // console.log("new qty", newQty);
+    // console.log(cartDataDB);
+
+    localStorage.setItem("cartDataDB", JSON.stringify(cartDataDB));
+}
+
+
+
+/* FUNCTION TO REDUCE QUANTITY */
+
+function reduceQuantity(index, totalDisplayArea, userQty){
+    userQty.style.outline = "3px solid red";
+    userQty.style.border = "0px";
+
+    var current_qty = cartDataDB[index].quantity; 
+    
+    var newQty = current_qty - Number(userQty.value);;
+    //cartDataDB[index].quantity += Number(userQty.value);
+    if(newQty==0){
+        alert("Item quantity 0, Increase quantity to buy item");
+        cartDataDB[index].quantity = newQty;
+        userQty.value = "1";
+        totalDisplayArea.innerText = "Rs. " + cartDataDB[index].price * cartDataDB[index].quantity;
+        }
+    else{
+        // userQty.value = newQty;
+        cartDataDB[index].quantity = newQty;
+        totalDisplayArea.innerText = "Rs. " + cartDataDB[index].price * cartDataDB[index].quantity;
+    }
+
+    // console.log("new qty", newQty);
+    // console.log(cartDataDB);
+
+    localStorage.setItem("cartDataDB", JSON.stringify(cartDataDB));
+}
+
+
+/* FUNCTION TO REMOVE ITEM FROM CART */
+
+function removeItemFromCart(index){
+    cartDataDB.splice(index, 1);
+
     console.log(cartDataDB);
+    showData(cartDataDB);
+
+    showCartsTotalItems(cartDataDB);
+
+    localStorage.setItem("cartDataDB", JSON.stringify(cartDataDB));
+}
+
+
+
+/* FUNCTION TO ADD PROMO CODE */
+
+document.querySelector("#promoBtn").addEventListener("click", applyPromo);
+var correctPromo = "royalenfield";
+
+function applyPromo(){
+    var userPromo = document.querySelector("#promoBox").value;
+    var promoMsgArea = document.querySelector("#promoApplyMsg");
+    if(userPromo === correctPromo){
+        promoMsgArea.innerText = "Congratulations! Promo code applied successfully. -30% discount!";
+        promoMsgArea.style.fontWeight = "bold";
+        promoMsgArea.style.color = "green";
+
+        var total = cartDataDB.reduce(function(acc, elem){
+            return acc + (elem.price * elem.quantity);
+        }, 0);
+
+        
+        var discountedTotal = Math.floor(total * 0.7);
+        var discount = Math.floor(total*0.3);
+
+        document.querySelector("#discountText").innerText = "- Rs." + discount;
+        document.querySelector("#discountText").style.color = "green";
+
+        document.querySelector("#finalTotalText").innerText = "Rs." + discountedTotal;
+
+        console.log(total, discountedTotal);
+        localStorage.setItem("promoApplied", JSON.stringify("true"));
+    }
+    else{
+        promoMsgArea.innerText = "Sorry! Invalid promo code. Try again.";
+        promoMsgArea.style.fontWeight = "bold";
+        promoMsgArea.style.color = "red";
+        document.querySelector("#discountText").innerText = "- Rs." + 0;
+        localStorage.setItem("promoApplied", JSON.stringify("false"));
+    }
+}
+
+
+/* FUNCTION TO CALCULATE TOTAL */
+
+function showTotal(cartDataDB){
+    var total = cartDataDB.reduce(function(acc, elem){
+        return acc + (elem.price * elem.quantity);
+    }, 0);
+
+    document.querySelector("#totalText").innerText = "Rs. " + total;
+    document.querySelector("#finalTotalText").innerText = "Rs. " + total;
 }
