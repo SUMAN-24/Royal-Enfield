@@ -83,6 +83,9 @@ function showData(data){
             var option = document.createElement("option");
             option.setAttribute("value", size[i]);
             option.innerText = size[i];
+            if(elem.size[size[i]]==0){
+                option.setAttribute("disabled", "true");
+            }
             sizeSelector.append(option);
         }
         

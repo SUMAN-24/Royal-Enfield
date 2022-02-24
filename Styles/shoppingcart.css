@@ -232,9 +232,9 @@ body{
     padding: 5px;
 }
 
-.cartItemSize select option{
+/* .cartItemSize select option{
     background: rgba(100, 100, 100, 0.3);;
-}
+} */
 
 .cartItemPrice{
     width: 15%;
