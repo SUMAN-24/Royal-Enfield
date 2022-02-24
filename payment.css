@@ -116,9 +116,9 @@ button{
 }
 
 /* card information */
-.payment_option>form{
+#payment-info{
     width: 90%;
-    padding: 0 25px;
+    padding: 0 25px 0 25px;
 }    
 
 .card-input > input{
