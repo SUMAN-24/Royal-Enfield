@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8d91ab7046.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./Styles/payment.css">
+    <link rel="stylesheet" href="./Styles/shoppingcommon.css">
+    <title>One Step Checkout</title>
+</head>
+<body>
+    <div class="main">
+        <div class="royal_img">
+            <img src="https://store.royalenfield.com/media/logo/stores/1/logo.png" alt="">
+        </div>
+        <div class="container">
+            <div class="checkout">
+                <!-- <div class="email">
+                    <input type="text" name="" id="" placeholder="Email*">
+                    <p>Your don't have account? <a href="">Register now</a> or <a href="">Continue as guest.</a></p>
+                </div> -->
+                <div class="bannerHeader">SHIPPING ADDRESS</div>
+                <form action="" class="address">
+                    <div class="name">
+                        <input type="text" name="" id="firstName"  placeholder="First Name*">
+                        <input type="text" name="" id="lastName"  placeholder="Last Name*">
+                    </div>
+                    <input type="text" name="" id="address1" placeholder="Address 1*"><br>
+                    <input type="text" name="" id="address2" placeholder="Address 2*">
+                    <div class="name">
+                        <input type="text" name="" id="city" placeholder="City*">
+                        <input type="text" name="" id="state" placeholder="State/Provice*">
+                        <input type="text" name="" id="country" placeholder="Country*" value="India" disabled>
+                    </div>
+                    <input type="text" name="" id="" placeholder="Mobile*"><br>
+                    <input type="text" name="" id=""><br>
+                    <input type="submit" value="NEXT" id="addnext">
+                </form>
+    
+                <button>SHIPPING METHOD</button>
+                <div class="method">
+                    <div class="prepaid">
+                        <input type="radio" name="" id="">
+                        <span>Fixed shipping</span>
+                        <p>Prepaid Orders</p>
+                        <p>₹0.00</p>
+                    </div>
+                    <div class="cod">
+                        <input type="radio" name="Fixed shipping" id="" value="">
+                        <span>Fixed shipping</span>
+                        <p>COD Orders</p>
+                        <p>₹50.00</p>
+                    </div>
+                </div>
+                
+                <button>PAYMENT METHOD</button>
+                <div class="payment">
+                    <div class="payment_option">
+                        <div class="card-option">
+                            <button href="" class="card">DEBIT CARD</button>
+                            <button href="" class="card">CREDIT CARD</button>
+                            <button href="" class="card">NET BANKINNG</button>
+                            <button href="" class="card">UPI</button>
+                            <button href="" class="card">GOOGLE PAY</button>
+                        </div>
+                        <form action="" id="payment-info">
+                            <div class="card-input">
+                                <label for="">Card Number</label><br>
+                                <input type="text" name="" id=""><br>
+                                <label for="">Expiration Date</label>
+                                <div>
+                                    <select name="" id="">
+                                        <option value="">Month</option>
+                                        <option value="1">01 - January</option>
+                                        <option value="2">02 - February</option>
+                                        <option value="3">03 - March</option>
+                                        <option value="4">04 - April</option>
+                                        <option value="5">05 - May</option>
+                                        <option value="6">06 - June</option>
+                                        <option value="7">07 - July</option>
+                                        <option value="8">08 - August</option>
+                                        <option value="9">09 - September</option>
+                                        <option value="10">10 - October</option>
+                                        <option value="11">11 - November</option>
+                                        <option value="12">12 - December</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">Year</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
+                                        <option value="2029">2029</option>
+                                        <option value="2030">2030</option>
+                                    </select>
+                                </div>
+                                <label for="">Name On Card</label><br>
+                                <input type="text"><br>
+                                <label for="">CVV</label><br>
+                                <input type="text">
+                                <input type="submit" name="" id="submit" value="CONFIRM ORDER">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+           
+
+            <div id="totalArea">
+                <div id="totalDisplayArea">
+                    <div id="summary">
+                        ORDER REVIEW
+                    </div>
+                    <div class="totalText">
+                        <p>Subtotal</p>
+                        <p id="totalText">0</p>
+                    </div>
+                    <div class="totalText">
+                        <p>Discount</p>
+                        <p id="discountText">- Rs. 0</p>
+                    </div>
+                    <div id="finalTotal" class="totalText">
+                        <p>Order Total</p>
+                        <p id="finalTotalText">0</p>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+
+
+    <!-- FOOTER AREA -->
+    <footer>
+        <div id="iconsPolicy">
+            <div>
+                <div class="iconAdd">
+                    <i class="fa-solid fa-plane-departure"></i>
+                </div>
+                <p>Shipping Policy</p>
+            </div>
+            <div>
+                <div class="iconAdd">
+                    <i class="fa-solid fa-rotate"></i>
+                </div>
+                <p>Exchange Policy</p>
+            </div>
+            <div>
+                <div class="iconAdd">
+                    <i class="fa-solid fa-circle-question"></i>
+                </div>
+                <p>FAQ's</p>
+            </div>
+        </div>
+
+        <div id="footerMain">
+            <div id="footerLinks">
+                <div id="aboutus">
+                    <p class="linkHeading">Royal Enfield</p>
+                    <a href="" class="aboutUsLinks">About us</a>
+                    <a href="" class="aboutUsLinks">Motorcycle</a>
+                    <a href="" class="aboutUsLinks">Media & Events</a>
+                    <a href="" class="aboutUsLinks">Career</a>
+                    <a href="" class="aboutUsLinks">Forum</a>
+                    <a href="" class="aboutUsLinks">Contact us</a>
+                </div>
+                <div id="store">
+                    <p class="linkHeading">Bulk Order</p>
+                    <a href="" class="order">
+                        Place a Bulk Order
+                    </a>
+                    <p class="linkHeading">Store Locator</p>
+                    <a href="" class="order">
+                        Find a store
+                    </a>
+                    <p class="linkHeading">Track Order</p>
+                    <a href="" class="order">
+                        Track Your Order
+                    </a>
+                </div>
+                <div id="keeptouch">
+                    <p class="linkHeading">Keep In Touch</p>
+                    <p>
+                        Sign up for our newsletter and be the first to know about coupons and special promotions.
+                    </p>
+                    <input type="email" placeholder="Enter Your email Address">
+                </div>
+                <div id="ourpolicies">
+                    <p class="linkHeading">Our Policies</p>
+                    <a href="" class="aboutUsLinks">Shipping & Payment</a>
+                    <a href="" class="aboutUsLinks">General & Returns and Exchange Policy/a>
+                    <a href="" class="aboutUsLinks">Terms & Conditions</a>
+                    <a href="" class="aboutUsLinks">Privacy & Policy</a>
+                </div>
+            </div>
+            <div id="copyrightText">
+                <small>
+                    © 2021 Royal Enfield. All rights reserved.| MRP wherever mentioned is inclusive of all taxes.
+                </small>
+                <div id="socialIcons">
+                    Follow Us 
+                    <a href="https://www.facebook.com/royalenfield" class="socialLink"><i class="fa-brands fa-facebook"></i></a>  
+                    <a href="https://twitter.com/royalenfield" class="socialLink"><i class="fa-brands fa-twitter"></i></a> 
+                    <a href="https://www.instagram.com/royalenfieldlifestyle/" class="socialLink"><i class="fa-brands fa-instagram"></i></a> 
+                    <a href="https://www.youtube.com/channel/UCyxUUHqmz9IiAnrROJc0mag" class="socialLink"><i class="fa-brands fa-youtube"></i></a> 
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
