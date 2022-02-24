@@ -121,6 +121,7 @@ function showData(data){
         itemQtyBox.setAttribute("value", elem.quantity);
         itemQtyBox.setAttribute("min", "0");
         itemQtyBox.setAttribute("max", "10");
+        itemQtyBox.setAttribute("disabled", "true");
         qtyAreaDiv.append(itemQtyBox)
 
         var cartMinusDiv = document.createElement("div");
@@ -195,12 +196,13 @@ function increaseQuantity(index, totalDisplayArea, userQty){
         alert("Maximum limit reached");
     }
     else{
-        var newQty = current_qty + Number(userQty.value);;
+        var newQty = current_qty + 1;
+        console.log("new qty", newQty);
         // userQty.value = newQty;
         //cartDataDB[index].quantity += Number(userQty.value);
         if(newQty>10){
             alert("Stock Limit Reached, Reduce quantity");
-            userQty.value = "1";
+            userQty.value = "10";
         }
         else{
             cartDataDB[index].quantity = newQty;

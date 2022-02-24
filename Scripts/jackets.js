@@ -164,11 +164,16 @@
             }
         }
 
-        
+        if(flag){
+            cartDataDB[curr_index].quantity += 1;
+        }
+        else{
+            cartDataDB.push(newCartData);
+        }
 
         console.log(newCartData);
 
-        cartDataDB.push(newCartData);
+        
 
         showCartsTotalItems(cartDataDB);
 
