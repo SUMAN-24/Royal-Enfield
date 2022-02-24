@@ -13,57 +13,98 @@
             <img src="https://store.royalenfield.com/media/logo/stores/1/logo.png" alt="">
         </div>
         <div class="container">
-            <div class="payment_option">
-                <div class="card-option">
-                    <button href="" class="card">DEBIT CARD</button>
-                    <button href="" class="card">CREDIT CARD</button>
-                    <button href="" class="card">NET BANKINNG</button>
-                    <button href="" class="card">UPI</button>
-                    <button href="" class="card">GOOGLE PAY</button>
-                </div>
-                <form action="" class="">
-                    <div class="card-input">
-                        <label for="">Card Number</label><br>
-                        <input type="text" name="" id=""><br>
-                        <label for="">Expiration Date</label><br>
-                        <div>
-                            <select name="" id="">
-                                <option value="">Month</option>
-                                <option value="1">01 - January</option>
-                                <option value="2">02 - February</option>
-                                <option value="3">03 - March</option>
-                                <option value="4">04 - April</option>
-                                <option value="5">05 - May</option>
-                                <option value="6">06 - June</option>
-                                <option value="7">07 - July</option>
-                                <option value="8">08 - August</option>
-                                <option value="9">09 - September</option>
-                                <option value="10">10 - October</option>
-                                <option value="11">11 - November</option>
-                                <option value="12">12 - December</option>
-                            </select>
-                            <select name="" id="">
-                                <option value="">Year</option>
-                                <option value="2022">2022</option>
-                                <option value="2023">2023</option>
-                                <option value="2024">2024</option>
-                                <option value="2025">2025</option>
-                                <option value="2026">2026</option>
-                                <option value="2027">2027</option>
-                                <option value="2028">2028</option>
-                                <option value="2029">2029</option>
-                                <option value="2030">2030</option>
-                            </select>
-                        </div>
-                        <label for="">Name on Card</label><br>
-                        <input type="text"><br>
-                        <label for="">CVV</label><br>
-                        <input type="text" id="cvv">
-                        <input type="submit" name="" id="confirm" value="CONFIRM ORDER">
+            <div class="checkout">
+                <button>SHIPPING ADDRESS</button>
+                <form action="" class="address">
+                    <div class="name">
+                        <input type="text" name="" id=""  placeholder="First Name*">
+                        <input type="text" name="" id=""  placeholder="Last Name*">
                     </div>
+                    <input type="text" name="" id="" placeholder="Address 1*"><br>
+                    <input type="text" name="" id="" placeholder="Address 2*">
+                    <div class="name">
+                        <input type="text" name="" id="" placeholder="City*">
+                        <input type="text" name="" id="" placeholder="Country*">
+                        <input type="text" name="" id="" placeholder="State/Provice*">
+                    </div>
+                    <input type="text" name="" id="" placeholder="Mobile*"><br>
+                    <input type="text" name="" id=""><br>
+                    <input type="submit" value="NEXT" id="addnext">
                 </form>
+    
+                <button>SHIPPING METHOD</button>
+                <div class="method">
+                    <div class="prepaid">
+                        <input type="radio" name="" id="">
+                        <span>Fixed shipping</span>
+                        <p>Prepaid Orders</p>
+                        <p>₹0.00</p>
+                    </div>
+                    <div class="cod">
+                        <input type="radio" name="Fixed shipping" id="" value="">
+                        <span>Fixed shipping</span>
+                        <p>COD Orders</p>
+                        <p>₹50.00</p>
+                    </div>
+                </div>
+                
+                <button>PAYMENT METHOD</button>
+                <div class="payment">
+                    <div class="payment_option">
+                        <div class="card-option">
+                            <button href="" class="card">DEBIT CARD</button>
+                            <button href="" class="card">CREDIT CARD</button>
+                            <button href="" class="card">NET BANKINNG</button>
+                            <button href="" class="card">UPI</button>
+                            <button href="" class="card">GOOGLE PAY</button>
+                        </div>
+                        <form action="">
+                            <div class="card-input">
+                                <label for="">Card Number</label><br>
+                                <input type="text" name="" id=""><br>
+                                <label for="">Expiration Date</label>
+                                <div>
+                                    <select name="" id="">
+                                        <option value="">Month</option>
+                                        <option value="1">01 - January</option>
+                                        <option value="2">02 - February</option>
+                                        <option value="3">03 - March</option>
+                                        <option value="4">04 - April</option>
+                                        <option value="5">05 - May</option>
+                                        <option value="6">06 - June</option>
+                                        <option value="7">07 - July</option>
+                                        <option value="8">08 - August</option>
+                                        <option value="9">09 - September</option>
+                                        <option value="10">10 - October</option>
+                                        <option value="11">11 - November</option>
+                                        <option value="12">12 - December</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">Year</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
+                                        <option value="2029">2029</option>
+                                        <option value="2030">2030</option>
+                                    </select>
+                                </div>
+                                <label for="">Name On Card</label><br>
+                                <input type="text"><br>
+                                <label for="">CVV</label><br>
+                                <input type="text">
+                                <input type="submit" name="" id="submit" value="CONFIRM ORDER">
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="item-deatil">
+           
+
+            <div class="item-deatil" >
                 <div>
                     <h3>ORDER REVIEW</h3>
                     <p></p>
@@ -73,13 +114,12 @@
                     <p>Subtotal(Excl. Tax)</p>
                     <p>Shipping</p>
                     <p>Discount</p>
-                    <span>(Fixed shipping - Prepaid Orders)</span>
+                    <p>(Fixed shipping - Prepaid Orders)</p>
                     <p>(+)IGST</p>
-                    <hr>
-                    <h3>Order Total</h3>
                 </div>
             </div>
         </div>
+        
     </div>
 </body>
 </html>
