@@ -5,9 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-            <link rel="stylesheet" href="./signup.css"/>
+    <link rel="stylesheet" href="./common.css"/>
+    <link rel="stylesheet" href="./signup.css"/>
+        <!-- FONT AWESOME -->
+        <script src="https://kit.fontawesome.com/8d91ab7046.js" crossorigin="anonymous"></script>
+            
 </head>
 <body>
+                         <!-- NAVBAR -->
+
+  <div id="navbar">
+        <div id="logo">
+            <img src="https://www.royalenfield.com/content/dam/royal-enfield/india/logos/logo.svg" alt="Royal Enfield Logo">
+        </div>
+        <div id="menu">
+
+            <div class="links">
+                <a href="">Motorcycles</a>
+            </div>
+            <div class="links">
+                <a href="">Service</a>
+            </div>
+            <div class="links">
+                <a href="">Locate Us</a>
+            </div>
+            <div class="links">
+                <a href="">Rides</a>
+            </div>
+            <div class="links">
+                <a href="">Accessories</a>    
+            </div>
+            <div class="links">
+                <a href="">Apparel</a>      
+            </div>
+            <div class="links">
+                <a href="">Our World</a>
+            </div>
+            <div class="links">
+                <a href="">Support</a>     
+            </div>
+        </div>
+
+        <div id="login">
+            <div class="links">
+                <a href="">Login</a>
+            </div>
+            <div class="links">
+                <a href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                </a>
+            </div>
+            <div id="location" class="links">
+                <a href="">
+                    <img src="https://www.royalenfield.com/content/dam/royal-enfield/india/maps/flags/india-flag-icon-128.png" alt="India"> En
+                </a>
+            </div>
+        </div>
+    </div>
+
+                                                <!-- SIGNUP -->
+
+
     <div class="signupCont">
         <div class="nav">
             <div>
@@ -29,7 +89,7 @@
                 <p>Find solutions, share similar experiences with fellow riders</p>
             </div>
         </div>
-        <h1>Sign up for Royal Enfield</h1>
+        <h1 id="signH1">Sign up for Royal Enfield</h1>
     <form id="form">
         <div id="inpt">
             <div>
@@ -43,10 +103,10 @@
 
             <div>
                 <div class="gen">
-                        <p>Select your Gender</p>
+                        <p id="gend">Select your Gender</p>
                         <div>
-                                <input type="radio"  class="genM" value="Male" name="gender"/>  Male
-                                <input type="radio" class="genF" value="Female" name="gender"/>  Female
+                                <input type="radio"  id="genM" value="Male" name="gender"/><Span>Male </Span>  
+                                <input type="radio" id="genF" value="Female" name="gender"/>  <span>Female </span>
                         </div>
                         </div>
                         <div>
@@ -78,10 +138,10 @@
             <div>
                 <div>
                       <div class="gen">
-                          <p>Do you own a Royal Enfield Motorcycle</p>
+                          <p id="gend">Do you own a Royal Enfield Motorcycle</p>
                           <div>
-                                  <input type="radio"  class="ownY" value="Yes" name="own"/> Yes 
-                                  <input type="radio" class="ownN" value="No"  name="own"/> No 
+                                  <input type="radio"  id="ownY" value="Yes" name="own"/> <span>Yes</span> 
+                                  <input type="radio" id="ownN" value="No"  name="own"/> <span>No </span>
                           </div>
                           </div>
                 </div>
@@ -96,7 +156,7 @@
                             privacy policy</a></p>
                 </div>
 
-                <div>
+                <div id="acceptCond">
                     <input type="checkbox" class="check"/>
                     <span style="text-align: left;">I accept the <a href="https://www.royalenfield.com/in/en/legal/terms-and-conditions/">terms and conditions</a> as well as <a href="https://www.royalenfield.com/in/en/legal/privacy-policy/">privacy policy</a><br>
                     </span>
@@ -117,7 +177,7 @@
             <input type="submit" class="createA" value="Create account">
         </div>
     </form>   
-            <h1>Or Sign up via</h1>
+            <h1 id="signH1">Or Sign up via</h1>
             
             <div class="orSignUp">
               
@@ -126,13 +186,145 @@
                     <button>Sign up with Twitter  ></button>
             </div>
 
-            <h1>
+            <h1 id="signH1">
                 Already have a Royal Enfield account
             </h1>
              <div align="center">
                 <button class="logI" >Login </button>
              </div>
     </div>
+
+
+
+               <!-- footer -->
+
+
+                 <!-- FOOTER BEGINS -->
+    <footer>
+        <div id="footerIconsDiv">
+            <div class="footerIcons">
+                <div>
+                    <i class="fa-solid fa-motorcycle"></i>
+                </div>
+                <p class="footerIconText">
+                   Book A Test Ride &nbsp; >
+                </p>
+            </div>
+            <div class="footerIcons">
+                <div>
+                    <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+                <p class="footerIconText">
+                   Find A Store &nbsp; >
+                </p>
+            </div>
+            <div class="footerIcons">
+                <div>
+                    <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+                <p class="footerIconText">
+                   Ride Out &nbsp; >
+                </p>
+            </div>
+        </div>
+        
+        <div id="quicklinksArea">
+            <div id="socialmediaLinks">
+                Join the Conversation
+                <a href="https://www.facebook.com/royalenfield"><i class="fa-brands fa-facebook-square" id="fb"></i></a>
+                <a href="https://twitter.com/royalenfield"><i class="fa-brands fa-twitter" id="tw"></i></a>
+                <a href="https://www.youtube.com/channel/UCyxUUHqmz9IiAnrROJc0mag"><i class="fa-brands fa-youtube" id="ytb"></i></a>
+                <a href="https://www.instagram.com/royalenfield"><i class="fa-brands fa-instagram-square" id="insta"></i></a>
+            </div>
+            <div id="quicklinksText">
+                <div class="footer">
+                    <div class="motor">
+                        <h3>Motorcycles</h3>
+                        <ul>
+                            <li>Classic 350 </li>
+                            <li>Meteor</li>
+                            <li>Interceptor</li>
+                            <li>Continental Gt</li>
+                            <li>Himalayan</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Rides & Events</h3>
+                           <ul>
+                                <li>Rides</li>
+                                <li>Events</li>
+                                <li>Ride Out</li>
+                           </ul>
+                    </div>
+                    <div>
+                        <h3>Support</h3>
+                            <ul>
+                                <li>Service Centres</li>
+                                <li>Stores</li>
+                                <li>Owener's Manual</li>
+                                <li>Contact Us</li>
+                                <li>Book a Test Ride</li>
+                                <li>Make It Yours</li>
+                                <li>Became a Dealer</li>
+                                <li>Became a Genuine Parts</li>
+                                <li>Distributor</li>
+                            </ul>
+                    </div>
+                    <div>
+                        <h3>About Us</h3>
+                        <ul>
+                            <li>Since 1901</li>
+                            <li>About Eicher Motors</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>News & Media</h3>
+                        <ul>
+                            <li>News</li>
+                            <li>Press Releases</li>
+                            <li>Media Kit</li>
+                            <li>Events</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Careers</h3>
+                        <ul>
+                            <li>Our Culture</li>
+                            <li>Job Opening</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Ours World</h3>
+                        <ul>
+                            <li>Royal Enfield App</li>
+                            <li>Custom World</li>
+                            <li>News and Media</li>
+                            <li>Since 1901</li>
+                            <li>Wallpapers</li>
+                            <li>Forum</li>
+                            <li>Trip Stories</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="policySection">
+                <small>
+                    © 2022. Royal Enfield. | *T&C apply. Images shown here may differ from the actual product.
+                </small>
+                <small>
+                    <a href="">Private Import Policy &nbsp; |</a>
+                    <a href="">Privacy &nbsp; |</a>
+                    <a href="">Terms & Conditions &nbsp; |</a>
+                    <a href="">Cookies &nbsp; | </a>
+                    <a href="">Sitemap </a>
+                </small>
+            </div>
+        </div>
+    </footer>
+
+
+    
 </body>
 </html>
 <script src="./signup.js"></script>
