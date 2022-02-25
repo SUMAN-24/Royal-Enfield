@@ -257,3 +257,38 @@ a.explore:hover{
 
 
 
+/* BIKE CAROUSAL IF DONE */
+
+
+
+/* SPECIFICATIONS STORY */
+#specStory{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+
+#specStory a{
+    left: 10%;
+}
+
+/* QUICKSTART GUIDE */
+
+#quickstart{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+
+#quickstart h2{
+    position: absolute;
+    color: #fff;
+    font-size: 18px;
+    top: 45%;
+    left: 10%;
+}
+
+#quickstart a{
+    top: 52%;
+    left: 10%;
+}
