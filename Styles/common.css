@@ -39,9 +39,10 @@ html{
 .logo{
     width: 15%
 }
-.logo > img{
+.logo img{
     width: 90%;
     margin: auto;
+    padding-left: 15px;
 }
 #menu{
     width: 45%;
