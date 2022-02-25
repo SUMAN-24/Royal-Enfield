@@ -3,19 +3,6 @@ body
     background-image: url(https://www.royalenfield.com/content/dam/royal-enfield/india/login/sign-up/banner-3.jpg);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
-body::-webkit-scrollbar
-{
-    width: 5px;
-    background-color: grey;
-}
-body::-webkit-scrollbar-thumb
-{
-    width: 5px;
-    background-color: black;
-}
-
-
 .signupCont
 {
     width: 90%;
@@ -248,3 +235,17 @@ button,.createA,.gen>div>input
                       margin-bottom: -50px;
                 }
        }
+@media all and (max-width:400px)
+{
+                    .nav
+                {  
+                    display: grid;
+                    grid-template-columns: repeat(1,1fr);
+                    justify-content: center;
+                    margin-bottom: 15px;
+                } 
+                .nav>div
+                {
+                    min-width: 390px;
+                }
+}
