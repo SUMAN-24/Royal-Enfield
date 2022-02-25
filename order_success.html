@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8d91ab7046.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./Styles/otppage.css">
+    <link rel="stylesheet" href="./Styles/order_success.css">
     <link rel="stylesheet" href="./Styles/shoppingcommon.css">
-    <title>Payment Gateway | Royal Enfield</title>
+    <title>Order Summary | Royal Enfield</title>
 </head>
 <body>
     <!-- HEADER => NAVBAR AREA -->
@@ -19,21 +19,50 @@
         </div>
     </div>
 
-    <!-- Main Body Container -->
-    <div id="otpBodyContainer">
-        <div id="otpArea">
-            <h1>Two-Step Verification</h1>
-            <p>Please enter the <b> One-Time Password (OTP) </b> received on your mobile </p>
-            <form action="" id="enterOTP">
-                <input type="password" id="otp" placeholder="Please enter the OTP received">
-                <input type="submit" value="ENTER OTP">
-            </form>
+
+    <!-- MAIN BODY CONTAINER -->
+
+    <div id="topBodyContainer">
+        <div id="mainContent">
+            <div id="confirmMsg">
+                <h1><i class="fa-solid fa-circle-check"></i></h1>
+                <h1>Order Confirmed!</h1>
+            </div>
+
+            <div id="orderMsg">
+                <h3>
+                    Thank you for purchasing with Royal Enfield India. 
+                </h3>
+                <h3>
+                    Your order will be shipped to the provided address within 5-7 business days.
+                </h3>
+                <h3>
+                    We will also send you an order confirmation mail and order tracking details to your registered email-id.
+                </h3>
+            </div>
+
+            <div id="shoppingBtn">
+                <button>
+                    <a href="jackets.html">
+                        <i class="fa-solid fa-arrow-left-long"></i> &nbsp; CONTINUE SHOPPING
+                    </a>
+                </button>
+            </div>
+
+            <div id="feedback">
+                <h3>Please share your shopping experience with us</h3>
+                <div id="like">
+                    <h3> <i class="fa-solid fa-thumbs-up likebtn"></i>  </h3>
+                </div>
+                <div id="dislike">
+                    <h3> <i class="fa-solid fa-thumbs-down dislikebtn"></i> </h3>
+                </div>
+            </div>
         </div>
     </div>
 
 
 
-    
     <!-- FOOTER AREA -->
     <footer>
         <div id="iconsPolicy">
@@ -57,6 +86,7 @@
             </div>
         </div>
 
+        
         <div id="footerMain">
             <div id="footerLinks">
                 <div id="aboutus">
@@ -116,25 +146,13 @@
 
 
 <script>
-    var correctOTP = 123456;
+    document.querySelector("#like").addEventListener("click", function(){
+        document.querySelector(".likebtn").style.color = "green";
+        document.querySelector(".dislikebtn").style.color = "black";
+    })
 
-    document.querySelector("#enterOTP").addEventListener("submit", validateOTP);
-
-    function validateOTP(event){
-        event.preventDefault();
-
-        var userOTP = Number(document.querySelector("#otp").value);
-
-        if(userOTP === correctOTP){
-            alert("Congratulations! Payment successful.");
-            document.querySelector("#otp").style.border = "2px solid green";
-            window.location.href = "order_success.html";
-        }
-        else{
-            alert("Error in validating payment. Please try again.");
-            document.querySelector("#otp").style.border = "2px solid red";
-            document.querySelector("#otp").value = "";
-        }
-    }
-
+    document.querySelector("#dislike").addEventListener("click", function(){
+        document.querySelector(".dislikebtn").style.color = "red";
+        document.querySelector(".likebtn").style.color = "black";
+    })
 </script>

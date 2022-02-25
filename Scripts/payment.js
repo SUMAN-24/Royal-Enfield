@@ -78,6 +78,7 @@ document.querySelector("#shippingAddress").addEventListener("submit", enterAddre
 function enterAddress(event){
     event.preventDefault();
 
+    var errorFlag = false;
     var form = document.querySelector("#shippingAddress");
 
     var name = form.firstName.value + " " + form.lastName.value;
@@ -91,6 +92,14 @@ function enterAddress(event){
 
     // Edge cases check
 
+    if(name.length == 0 || addressLine1.length==0 || city.length == 0 || state.length==0){
+        alert("Please Enter Valid details");
+        errorFlag = true;
+    }
+    else{
+        errorFlag = false;
+    }
+
     var mobileStr = mobile.toString();
 
     var firstdigit = mobileStr[0];
@@ -98,37 +107,59 @@ function enterAddress(event){
         alert("Mobile number cannot start with 0");
         form.mobile.value = "";
         mobile = form.mobile.value;
+        errorFlag = true;
     }
 
     if(mobileStr.length!=10){
         alert("Mobile number needs to be 10 digits");
         form.mobile.value = "";
         mobile = form.mobile.value;
+        errorFlag = true;
+    }
+    if(mobileStr.length==10){
+        errorFlag = false;
     }
 
     if(pincode.length!=6){
         alert("Please enter correct PIN Code");
         form.pin.value = "";
         pincode = form.pin.value;
+        errorFlag = true;
     }
 
-    var newAddress = {
-        name : name.toUpperCase(),
-        address : {
-            add1 : addressLine1.toUpperCase(),
-            add2 : addressLine2.toUpperCase(),
-            city : city.toUpperCase(),
-            state : state.toUpperCase(),
-            country : country.toUpperCase(), 
-            pincode : pincode
-        },
-        mobile : mobile,
+    if(pincode.length==6){
+        errorFlag = false;
     }
 
-    console.log(newAddress);
+    //errorFlag = false;
 
-    addressDB.push(newAddress);
-    //console.log(addressDB);
-    localStorage.setItem("addressDB", JSON.stringify(addressDB));
-    window.location.href = "#paymentSection";
+    
+
+    
+    if(!errorFlag){
+        var newAddress = {
+            name : name.toUpperCase(),
+            address : {
+                add1 : addressLine1.toUpperCase(),
+                add2 : addressLine2.toUpperCase(),
+                city : city.toUpperCase(),
+                state : state.toUpperCase(),
+                country : country.toUpperCase(), 
+                pincode : pincode
+            },
+            mobile : mobile,
+        };
+
+        console.log(newAddress);
+
+        addressDB.push(newAddress);
+        //console.log(addressDB);
+        localStorage.setItem("addressDB", JSON.stringify(addressDB));
+
+        
+        window.location.href = "#paymentSection";
+    }
+    else{
+        window.location.href = "#billingAddress";
+    }
 }
