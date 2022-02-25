@@ -331,14 +331,3 @@ function showTotal(cartDataDB){
 
 
 
-/* FUNCTION  TO REDIRECT USERS */
-
-document.querySelector("#chekoutBtn").addEventListener("click", function(){
-    window.location.href = "shopping_payment.html";
-});
-
-
-document.querySelector("#continueBtn").addEventListener("click", function(){
-    window.location.href = "jackets.html";
-});
-

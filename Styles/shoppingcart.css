@@ -391,9 +391,6 @@ body{
     margin: auto;
     margin-top: 20px;
     height: 50px;
-    font-size: 15px;
-    font-weight: bold;
-    color: white;
     border: 0px;
     cursor: pointer;
 }
@@ -408,6 +405,13 @@ body{
 
 #checkoutBtn{
     background-color: red;
+}
+
+#continueBtn a, #checkoutBtn a, #continueBtn a:hover #checkoutBtn a:hover{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
 }
 
 
