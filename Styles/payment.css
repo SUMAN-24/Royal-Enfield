@@ -33,12 +33,12 @@ html{
     display: grid;
     grid-template-columns: 2fr 1fr;
     margin-top: 20px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
-.container > div{
+/* .container > div{
     border: 1px solid blue;
-}
+} */
 /* .email{
     width: 65%;
     margin: 20px 20px;
@@ -60,18 +60,18 @@ html{
     margin: auto;
     display: flex;
     flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .sections{
     width: 90%;
     margin: auto;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
 }
 .bannerHeader{
     width: 95%;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 20px;
     background-color: #ef0531;
     color: white;
     text-align: center;
@@ -121,6 +121,15 @@ html{
     padding-left: 10px;
 }
 
+.area > select{
+    width: 30%;
+    display: inline-block;
+    height: 41px;
+    margin-top: 10px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
 
 
 #addnext{
@@ -138,6 +147,7 @@ html{
     margin: 0;
 }
 .method p{
+    font-size: 18px;
     font-weight: bold;
 }
 /* .prepaid{
@@ -155,7 +165,7 @@ html{
     height: 450px;
     box-sizing: border-box;
     padding: 10px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 .payment_option{
     width: 100%;
@@ -195,7 +205,7 @@ html{
     padding: 10px 5px 0 5px;
 }
 #cvv{
-    width: 60%;  
+    width: 95%;  
 }
 .card-input > div {
     width: 100%;
