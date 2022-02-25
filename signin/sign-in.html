@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Libre+Franklin:wght@500&family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Libre+Franklin:wght@500&family=Montserrat:wght@600&family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/signup/styles/common.css">
+    <link rel="stylesheet" href="/signin/styles/signin.css">
+
+</head>
+<body>
+
+    <div id="login_container">
+     <!-- HEADER AREA - NAVBAR     -->
+     <div id="navbar">
+        <div id="logo">
+            <img src="https://www.royalenfield.com/content/dam/royal-enfield/india/logos/logo.svg" alt="Royal Enfield Logo">
+        </div>
+        <div id="menu">
+            <div class="links">
+                <a href="">Motorcycles</a>
+            </div>
+            <div class="links">
+                <a href="">Service</a>
+            </div>
+            <div class="links">
+                <a href="">Locate Us</a>
+            </div>
+            <div class="links">
+                <a href="">Rides</a>
+            </div>
+            <div class="links">
+                <a href="">Accessories</a>    
+            </div>
+            <div class="links">
+                <a href="">Apparel</a>      
+            </div>
+            <div class="links">
+                <a href="">Our World</a>
+            </div>
+            <div class="links">
+                <a href="">Support</a>     
+            </div>
+        </div>
+        <div id="login">
+            <div class="links">
+                <a href="/sign-in.html">Login</a>
+            </div>
+            <div class="links">
+                <a href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                </a>
+            </div>
+            <div id="location" class="links">
+                <a href="">
+                    <img src="https://www.royalenfield.com/content/dam/royal-enfield/india/maps/flags/india-flag-icon-128.png" alt="India"> En
+                </a>
+            </div>
+        </div>
+    </div>
+   
+    <!-- Navbar ends & Login Part starts Here-->
+        <div class="container2">
+   <div class="background-image">
+       <div class="login_section">
+        <div class="login_form_container1">
+            <h2 class="login_head">
+                Log in to your Royal Enfield account
+            </h2>
+            <form id="form">
+            <div class="login_information_txt">
+                <div class="input_mail">
+                    <input type="text", name="userId", id="userId", placeholder="Email/Mobile Number" >
+                </div>
+                <div class="login_buttn">
+                    <input type="password", name="password", id="password", placeholder="Password" >
+                </div>
+            </div>
+            <div class="login_buttn_txt">
+                <div>
+                    <input type="submit" id="login_button" value="Login">
+                </div>
+                <div class="forgot">
+                    <span onclick="location.href='forgot_password.html';">Forgot password?</span>
+                </div>
+            </div>
+            </form>
+        </div>
+        <div class="login_form_container2">
+            <div>
+                <h2>New to royalenfield.com?</h2>
+               <p> <a href="/signup/signup.html" class="custom_buttn" id="createAcc">
+                    
+                    Create an account ▶
+                </a></p>
+                <h2>Or sign in via</h2>
+            </div>
+            <div class="social_buttons">
+                <button onClick="window.location.href='https://www.facebook.com/login.php?skip_api_login=1&api_key=164120184241069&kid_directed_site';" class="custom button" id="fblogin">
+                    Sign in with Facebook ▶
+                </button>
+                <button class="custom button" id="googlelogin">
+                    Sign in with Google ▶
+                </button>
+                <button onClick="location.href='https://www.twitter.com';" target="_blank" class="custom button" id="twitterlogin">
+                    Sign in with Twitter ▶
+                </button>
+            </div>
+        </div>
+       </div>
+   </div>
+    </div>
+    </div>
+</body>
+</html>
+<script src="/signin/scripts/login.js"></script>
+<script>
+    let other=null;  //will be our window reference
+    let features=
+            'menubar=yes, location=yes, resizable=no, scrollbars=yes, status=no, height=600, width=500';
+    
+    document.getElementById('googlelogin').addEventListener('click', (ev) => {
+
+        //open google login in current tab
+        let url='https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?redirect_uri=storagerelay%3A%2F%2Fhttps%2Fwww.royalenfield.com%3Fid%3Dauth777795&response_type=code%20permission%20id_token&scope=openid%20profile%20email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&openid.realm&include_granted_scopes=true&client_id=777274662796-qs35tlad5fb1tapd6csbiakluaaj9186.apps.googleusercontent.com&ss_domain=https%3A%2F%2Fwww.royalenfield.com&access_type=offline&prompt=consent&origin=https%3A%2F%2Fwww.royalenfield.com&gsiwebsdk=2&flowName=GeneralOAuthFlow';
+        let other= window.open(url, '_self');
+        other.document.body.style.height='600'.width='500';
+    });
+</script>
