@@ -292,3 +292,85 @@ a.explore:hover{
     top: 52%;
     left: 10%;
 }
+
+
+/* Gallery Div */
+
+#galleryDiv{
+    width: 100%;
+    height: 100vh;
+}
+
+#galleryDiv div{
+    box-sizing: border-box;
+}
+
+#galleryDiv > div:first-child{
+    text-align: center;
+    color: white;
+    background-color: #212121;
+    padding: 10px;
+}
+
+#galleryContainer{
+    width: 100%;
+    height: 95%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50% 50%;
+}
+
+#galleryContainer > div{
+    /* border: 1px solid blue; */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#galleryContainer > div img:hover{
+    transform: scale(1.1);
+    transition: 0.5s all ease;
+}
+
+.galleryimg{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* RECOMMENDED GEAR */
+#recommended{
+    width: 100%;
+    margin-bottom: -10px;
+}
+
+#recommended div{
+    box-sizing: border-box;
+}
+
+#recommended > div:first-child{
+    text-align: center;
+    color: white;
+    background-color: #212121;
+    padding: 20px;
+}
+
+#recommendedDiv{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#recommendedDiv p{
+    position: absolute;
+    color: #fff;
+    font-size: 16px;
+    width: 25%;
+    top: 45%;
+    left: 10%;
+}
+
+#recommendedDiv a{
+    left: 10%;
+    top: 52%;
+}
+
