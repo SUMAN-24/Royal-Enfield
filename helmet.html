@@ -6,8 +6,329 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helmets Online – Buy Helmets For Bike | Royal Enfield Store</title>
     <link rel="icon" type="image/x-icon" href="https://store.royalenfield.com/media/favicon/stores/1/favicon-128x128.png">
-    <link rel="stylesheet" href="/apparel.css">
     <script src="https://kit.fontawesome.com/8d91ab7046.js" crossorigin="anonymous"></script>
+    <style>
+        /* NAVBAR STYLING */
+#navbar{
+    /* width: 100%; */
+    height: 85px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: space-around;
+    /* border: 2px solid red; */
+    box-sizing: border-box;
+    /* position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black; */
+}
+
+/* #main{
+    margin-top: 10px;
+} */
+
+/* #navbar > div{
+    border: 1px solid blue;
+} */
+
+#menu{
+    width: 5%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+#menu a, #menu a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+#logo{
+    width: 34%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: right;
+}
+
+#logo img{
+    filter: invert(1);
+}
+
+#userArea{
+    width: 20%;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.icons{
+    display: inline-block;
+    margin-left: 15px;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+.icontxt{
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    /* border: 1px solid blue; */
+}
+/* a.userAreaIcons{
+    
+} */
+
+#userArea>a, #userArea > a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+
+/*TOP CART PROPERTIES*/
+#topCart{
+    position: relative;
+}
+
+#totalCartItems{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #eb0b0b;
+    top: 0;
+    left: 50%;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+/* helmet BANNER AREA */
+
+#bannerArea{
+    /* top: 85px; */
+    position: relative;
+}
+
+#banner > img{
+    width: 100%;
+}
+
+#bannerText{
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    width: 35%;
+    background-color: rgba(255,255,255,.6);;
+    box-sizing: border-box;
+    padding: 20px;
+    opacity: 0.75;
+    /* border: 2px solid red; */
+}
+
+#bannerText > h1{
+    font-size: 36px;
+    font-weight: 700;
+    font-family: Arial black;
+}
+
+/* CATEGORY HEADER */
+#categoryHeader{
+    width: 100%;
+    height: 50px;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#categoryHeader a, span, p{
+    font-size: 12px;
+}
+
+#historyLinks{
+    width: 80%;
+    margin: auto;
+}
+
+#categoryHeader a{
+    text-decoration: none;
+    color: black;
+}
+
+#categoryHeader a:hover{
+    text-decoration:underline;
+}
+
+.currentPage{
+    display: inline-block;
+}
+
+/* FOOTER AREA */
+
+#iconsPolicy{
+    width: 100%;
+    height: 90px;
+    margin-top: 30px;
+    padding: 1px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ebebeb;
+}
+
+#iconsPolicy > div{
+    width: 10%;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    height: 100%;
+    padding: 10px;
+}
+
+.iconAdd{
+    text-align: center;
+    font-size: 32px;
+}
+
+#iconsPolicy > div > p{
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+}
+
+#footerMain{
+    width: 100%;
+    background-color: black;
+    height: 400px;
+    /* display: flex;
+    align-items: center; */
+}
+
+#footerLinks{
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+#footerLinks > div{
+    /* border: 1px solid blue; */
+    height: 100%;
+    margin-top: 5%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#aboutus{
+    width: 15%;
+}
+
+
+
+.aboutUsLinks{
+    display: block;
+    color: grey;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.aboutUsLinks, .aboutUsLinks:hover{
+    text-decoration: none;
+    color: grey;
+}
+
+#store{
+    width: 25%;
+}
+
+
+
+a.order{
+    display: block;
+    border: 1px solid grey;
+    margin-bottom: 10px;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.order, a.order:hover{
+    text-decoration: none;
+    color: grey;
+}
+
+#keeptouch{
+    width: 25%;
+}
+
+#keeptouch p:nth-child(2){
+    color: grey;
+    font-size: 14px;
+}
+
+
+#keeptouch input{
+    width: 100%;
+    background-color: black;
+    border: 0px;
+    outline: 1px solid grey;
+    height: 15%;
+    padding: 5px;
+    color: grey;
+}
+
+#ourpolicies{
+    width: 20%;
+}
+
+#ourpolicies p{
+    color: white;
+
+}
+
+.linkHeading{
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#keeptouch > p:nth-child(2){
+    margin-bottom: 10px;
+}
+
+#copyrightText{
+    width: 80%;
+    height: 10%;
+    margin: auto;
+    /* border: 1px solid red; */
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#copyrightText small{
+    color: grey;
+    font-size: 11px;
+}
+
+#socialIcons{
+    color: white;
+}
+
+#socialIcons i{
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+}
+    </style>
 </head>
 <body>
     <div id="navbar">

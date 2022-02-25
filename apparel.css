@@ -1,12 +1,15 @@
 body{
-    color: black;
+    background-color: black;
 }
 .collection{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto;
-    
-    
+}
+h2{
+    color: white;
+    text-align: center;
+    padding-bottom: 15px;
 }
 .glove{
     background-image: url(https://www.royalenfield.com/content/dam/royal-enfield/india/apparel/collections/gloves.jpg);
@@ -55,7 +58,7 @@ body{
 }
 .jacket{
     background-image: url(https://www.royalenfield.com/content/dam/royal-enfield/india/apparel/collections/protective-jackets.JPG);
-    height: 600px;
+    height: 470px;
 }
 .mlg{
     background-image: url(https://www.royalenfield.com/content/dam/royal-enfield/india/apparel/collections/mlag.jpg);
@@ -75,336 +78,126 @@ body{
     background-image: url(https://www.royalenfield.com/content/dam/royal-enfield/india/apparel/collections/bags.jpg);
 }
 
-/* helmet section desgin */
+/* IMAGE CAROUSAL */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-*{
-    margin: 0px;
-}
-
-body{
-    font-family: 'Open Sans', sans-serif;
-}
-
-
-/* NAVBAR STYLING */
-#navbar{
-    /* width: 100%; */
-    height: 85px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    display: flex;
-    justify-content: space-around;
-    /* border: 2px solid red; */
-    box-sizing: border-box;
-    /* position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: black; */
-}
-
-/* #main{
-    margin-top: 10px;
-} */
-
-/* #navbar > div{
-    border: 1px solid blue;
-} */
-
-#menu{
-    width: 5%;
-    box-sizing: border-box;
-    padding: 20px;
-}
-
-#menu a, #menu a:hover{
-    text-decoration: none;
-    color: black;
-}
-
-#logo{
-    width: 34%;
-    box-sizing: border-box;
-    padding: 20px;
-    text-align: right;
-}
-
-#logo img{
-    filter: invert(1);
-}
-
-#userArea{
-    width: 20%;
-    box-sizing: border-box;
-    padding: 20px;
-    font-size: 14px;
-}
-
-.icons{
-    display: inline-block;
+/* To change indicators to circle */
+.carousel .carousel-indicators li {
+    width: 10px;
+    height: 10px;
     margin-left: 15px;
-    box-sizing: border-box;
-    padding: 10px;
-    text-align: center;
-    /* border: 1px solid red; */
+    border-radius: 100%;
 }
 
-.icontxt{
-    height: 30px;
+/* To change active indicator color to red */
+.carousel .carousel-indicators .active{
+    background-color: #d1291c;
+}
+
+.carousel-item a{
     display: inline-block;
-    text-align: center;
-    /* border: 1px solid blue; */
-}
-/* a.userAreaIcons{
-    
-} */
-
-#userArea>a, #userArea > a:hover{
-    text-decoration: none;
-    color: black;
-}
-
-
-/*TOP CART PROPERTIES*/
-#topCart{
-    position: relative;
-}
-
-#totalCartItems{
-    position: absolute;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    background-color: #eb0b0b;
-    top: 0;
-    left: 50%;
+    font-size: 14px;
+    font-weight: bold;
     color: #ffffff;
-    font-size: 12px;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 5px;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    padding-right: 20px;
+    position: absolute;
 }
 
-/* helmet BANNER AREA */
+.carousel-item a:hover{
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+}
 
-#bannerArea{
-    /* top: 85px; */
+.slide{
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    width: 100%;
+    height: 550px;
     position: relative;
 }
 
-#banner > img{
-    width: 100%;
+.slide1{
+    background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/accessories/banner/campaign/slip-on-silencer.jpg");
 }
 
-#bannerText{
-    position: absolute;
-    top: 35%;
+.slide1 > a{
+    top: 45%;
     left: 10%;
-    width: 35%;
-    background-color: rgba(255,255,255,.6);;
-    box-sizing: border-box;
-    padding: 20px;
-    opacity: 0.75;
-    /* border: 2px solid red; */
 }
 
-#bannerText > h1{
-    font-size: 36px;
-    font-weight: 700;
-    font-family: Arial black;
+.slide2{
+    background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/home/banner/desktop/royal-enfield-hfi.png");
 }
 
-/* CATEGORY HEADER */
-#categoryHeader{
-    width: 100%;
-    height: 50px;
-    background-color: #f2f2f2;
-    box-sizing: border-box;
-    padding: 10px;
+.slide2 > a{
+    top: 80%;
+    left: 45%;
 }
 
-#categoryHeader a, span, p{
-    font-size: 12px;
+.slide3{
+    background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/motorcycles/classic-350/home/bereborn-homepage.png");
 }
 
-#historyLinks{
-    width: 80%;
-    margin: auto;
+.slide3 > a{
+    top: 45%;
+    left: 70%;
 }
 
-#categoryHeader a{
-    text-decoration: none;
-    color: black;
+.slide4{
+    background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/home/banner/desktop/gtcup-home.jpg");
 }
 
-#categoryHeader a:hover{
-    text-decoration:underline;
+.slide4 > a{
+    top: 50%;
+    left: 45%;
 }
 
-.currentPage{
-    display: inline-block;
+.slide5{
+    background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/home/banner/desktop/miy-riding-jacket.jpg");
 }
 
-/* FOOTER AREA */
-
-#iconsPolicy{
-    width: 100%;
-    height: 90px;
-    margin-top: 30px;
-    padding: 1px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #ebebeb;
+.slide5 > a{
+    top: 45%;
+    left: 10%;
 }
 
-#iconsPolicy > div{
-    width: 10%;
-    /* border: 1px solid red; */
-    box-sizing: border-box;
-    height: 100%;
-    padding: 10px;
+.slide6{
+    background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/motorcycles/classic-350/podcast/homepage-podcast.jpg");
 }
 
-.iconAdd{
-    text-align: center;
-    font-size: 32px;
+.slide6 > h2{
+    position: absolute;
+    width: 30%;
+    color: #ffffff;
+    top: 30%;
+    left: 60%;
 }
 
-#iconsPolicy > div > p{
+.slide6 > p{
+    position: absolute;
+    color: #ffffff;
+    font-size: 14px;
     font-weight: bold;
-    text-align: center;
-    font-size: 14px;
+    top: 47%;
+    left: 60%;
 }
 
-#footerMain{
-    width: 100%;
-    background-color: black;
-    height: 400px;
-    /* display: flex;
-    align-items: center; */
+.slide6 > a{
+    top: 53%;
+    left: 60%;
 }
 
-#footerLinks{
-    width: 80%;
-    height: 70%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* border: 1px solid red; */
+.slide7{
+    background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/motorcycles/classic-350/home/royal-enfield-timeless-classic.png");
 }
 
-#footerLinks > div{
-    /* border: 1px solid blue; */
-    height: 100%;
-    margin-top: 5%;
-    box-sizing: border-box;
-    padding: 10px;
-}
-
-#aboutus{
-    width: 15%;
+.slide7 > a{
+    top: 80%;
+    left: 45%;
 }
 
 
 
-.aboutUsLinks{
-    display: block;
-    color: grey;
-    font-size: 14px;
-    margin-top: 10px;
-}
 
-.aboutUsLinks, .aboutUsLinks:hover{
-    text-decoration: none;
-    color: grey;
-}
-
-#store{
-    width: 25%;
-}
-
-
-
-a.order{
-    display: block;
-    border: 1px solid grey;
-    margin-bottom: 10px;
-    height: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-a.order, a.order:hover{
-    text-decoration: none;
-    color: grey;
-}
-
-#keeptouch{
-    width: 25%;
-}
-
-#keeptouch p:nth-child(2){
-    color: grey;
-    font-size: 14px;
-}
-
-
-#keeptouch input{
-    width: 100%;
-    background-color: black;
-    border: 0px;
-    outline: 1px solid grey;
-    height: 15%;
-    padding: 5px;
-    color: grey;
-}
-
-#ourpolicies{
-    width: 20%;
-}
-
-#ourpolicies p{
-    color: white;
-
-}
-
-.linkHeading{
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-#keeptouch > p:nth-child(2){
-    margin-bottom: 10px;
-}
-
-#copyrightText{
-    width: 80%;
-    height: 10%;
-    margin: auto;
-    /* border: 1px solid red; */
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#copyrightText small{
-    color: grey;
-    font-size: 11px;
-}
-
-#socialIcons{
-    color: white;
-}
-
-#socialIcons i{
-    color: white;
-    font-size: 20px;
-    margin-left: 10px;
-}
