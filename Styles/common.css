@@ -22,6 +22,11 @@ html{
     justify-content: space-between;
     padding: 5px;
     font-family: 'Open Sans', sans-serif;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
 }
 #navbar > div{
     display: flex;

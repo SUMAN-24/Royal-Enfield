@@ -300,6 +300,191 @@ html{
 
 /* AYUSH PART */
 
+/* MOTORCYCLES DIV */
+
+#motorcycles{
+    box-sizing: border-box;
+    display:flex;
+    background-color: #212121;
+    /* border: 1px solid red; */
+    height: 60px;
+    justify-content: flex-start;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+    color: white;
+    align-items: center;
+}
+#motorcycles>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+   
+}
+#motorcycles>div:nth-child(2){
+    font-size: 20px;
+    padding: 18px;
+    font-weight: bolder;
+}
+
+
+
+#motorcyclesDiv{
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+#motorcyclesDiv img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+}
+
+#motorcyclesDiv a{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    padding-right: 20px;
+    position: absolute;
+    left: 5%;
+    top: 45%;
+    text-decoration: none;
+}
+
+#motorcyclesDiv a:hover{
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+}
+
+
+
+/* RIDES DIV */
+
+#rides{
+    box-sizing: border-box;
+    display:flex;
+    background-color: #212121;
+    /* border: 1px solid red; */
+    height: 60px;
+    justify-content: flex-start;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+    color: white;
+    align-items: center;
+}
+#rides>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+   
+}
+#rides>div:nth-child(2){
+    font-size: 20px;
+    padding: 18px;
+    font-weight: bolder;
+}
+
+
+#ridesDiv{
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+#ridesDiv img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+}
+
+#ridesDiv a{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    padding-right: 20px;
+    position: absolute;
+    left: 5%;
+    top: 80%;
+    text-decoration: none;
+}
+
+#ridesDiv a:hover{
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+}
+
+
+/* APPAREL DIV */
+
+#apparel{
+    box-sizing: border-box;
+    display:flex;
+    background-color: #212121;
+    /* border: 1px solid red; */
+    height: 60px;
+    justify-content: flex-start;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+    color: white;
+    align-items: center;
+}
+#apparel>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+   
+}
+#apparel>div:nth-child(2){
+    font-size: 20px;
+    padding: 18px;
+    font-weight: bolder;
+}
+
+
+#apparelDiv{
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+#apparelDiv img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(70%);
+}
+
+#apparelDiv a{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    padding-right: 20px;
+    position: absolute;
+    left: 5%;
+    top: 80%;
+    text-decoration: none;
+}
+
+#apparelDiv a:hover{
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+}
+
+
 /* ACCESORIES DIV */
 
 /* SUNIL PART */

@@ -21,3 +21,16 @@ document.querySelector("#pauseBtn").addEventListener("click", function(){
         video.pause();
     }
 })
+
+
+
+// /* TRYING TO PREVEMT ANCHOR TAGS TO RELOAD */
+
+// document.querySelectorAll("a").addEventListener("click", stopReload);
+
+// function stopReload(event){
+//     event.preventDefault();
+//     // if(event.target.href == ""){
+//     //     event.preventDefault();
+//     // }
+// }
