@@ -1,3 +1,15 @@
+body::-webkit-scrollbar
+{
+    width: 5px;
+    background-color: grey;
+}
+body::-webkit-scrollbar-thumb
+{
+    width: 5px;
+    background-color: black;
+}
+
+
 /* FOOTER AREA */
 
 #iconsPolicy{

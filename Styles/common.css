@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body::-webkit-scrollbar
+{
+    width: 5px;
+    background-color: grey;
+}
+body::-webkit-scrollbar-thumb
+{
+    width: 5px;
+    background-color: black;
+}
+
 *{
     margin: 0px;
 }
@@ -220,4 +233,62 @@ ul{
 #policySection a:hover{
     text-decoration: none;
     color: #d1291c;
+}
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+
+
+/* FOOTER SECTION */
+@media (max-width:1115px) and (min-width:767px)
+{
+    .footer{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                grid-template-rows: auto;
+                row-gap: 10px;
+        }
+}
+
+                
+@media (max-width:767px)
+{
+    #menu{
+            visibility: hidden;
+    }
+    #login{
+        width: 150px;
+    }
+    #logo{
+        width: 20%;
+    }
+
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        row-gap: 10px;
+    }
+
+    #footerIconsDiv{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+    }
+
+    footer ul li{
+        display: none;
+    }
+
+    footer h3:hover{
+        cursor: pointer;
+        color: #d1291c;
+    }
 }
