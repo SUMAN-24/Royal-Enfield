@@ -12,6 +12,10 @@ body{
     margin: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .royal_img{
     width: 100%;
     text-align: center;

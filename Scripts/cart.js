@@ -328,3 +328,17 @@ function showTotal(cartDataDB){
     document.querySelector("#totalText").innerText = "Rs. " + total;
     document.querySelector("#finalTotalText").innerText = "Rs. " + total;
 }
+
+
+
+/* FUNCTION  TO REDIRECT USERS */
+
+document.querySelector("#chekoutBtn").addEventListener("click", function(){
+    window.location.href = "shopping_payment.html";
+});
+
+
+document.querySelector("#continueBtn").addEventListener("click", function(){
+    window.location.href = "jackets.html";
+});
+

@@ -2,7 +2,7 @@ var cartDataDB = JSON.parse(localStorage.getItem("cartDataDB")) || [];
 
 var promoAppliedOrNot = JSON.parse(localStorage.getItem("promoApplied"));
 
-
+var addressDB = JSON.parse(localStorage.getItem("addressDB")) || [];
 
 
 showTotal(cartDataDB);
@@ -21,6 +21,10 @@ function showTotal(cartDataDB){
         document.querySelector("#discountText").style.fontWeight = "bold";
     }
 
+    if(discountTotal < 1000){
+        document.querySelector("#shippingText").innerText = "Rs. 50";
+        discountTotal += 50;
+    }
     document.querySelector("#totalText").innerText = "Rs. " + total;
     document.querySelector("#finalTotalText").innerText = "Rs. " + discountTotal;
 }
@@ -62,4 +66,69 @@ function validateCard(event){
         form.expyear.style.border = "2px solid red";
         form.cvv.style.border = "2px solid red";
     }
+}
+
+
+
+/* FUNCTION TO SAVE SHIPPING ADDRESS */
+
+
+document.querySelector("#shippingAddress").addEventListener("submit", enterAddress);
+
+function enterAddress(event){
+    event.preventDefault();
+
+    var form = document.querySelector("#shippingAddress");
+
+    var name = form.firstName.value + " " + form.lastName.value;
+    var addressLine1 = form.address1.value;
+    var addressLine2 = form.address2.value;
+    var city = form.city.value;
+    var state = form.state.value;
+    var country = form.country.value;
+    var mobile = form.mobile.value;
+    var pincode = form.pin.value;
+
+    // Edge cases check
+
+    var mobileStr = mobile.toString();
+
+    var firstdigit = mobileStr[0];
+    if(firstdigit=="0"){
+        alert("Mobile number cannot start with 0");
+        form.mobile.value = "";
+        mobile = form.mobile.value;
+    }
+
+    if(mobileStr.length!=10){
+        alert("Mobile number needs to be 10 digits");
+        form.mobile.value = "";
+        mobile = form.mobile.value;
+    }
+
+    if(pincode.length!=6){
+        alert("Please enter correct PIN Code");
+        form.pin.value = "";
+        pincode = form.pin.value;
+    }
+
+    var newAddress = {
+        name : name.toUpperCase(),
+        address : {
+            add1 : addressLine1.toUpperCase(),
+            add2 : addressLine2.toUpperCase(),
+            city : city.toUpperCase(),
+            state : state.toUpperCase(),
+            country : country.toUpperCase(), 
+            pincode : pincode
+        },
+        mobile : mobile,
+    }
+
+    console.log(newAddress);
+
+    addressDB.push(newAddress);
+    //console.log(addressDB);
+    localStorage.setItem("addressDB", JSON.stringify(addressDB));
+    window.location.href = "#paymentSection";
 }
