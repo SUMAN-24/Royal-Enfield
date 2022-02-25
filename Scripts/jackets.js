@@ -380,3 +380,49 @@ function filterBySize(data){
 
 }
 
+
+
+
+
+/* SEARCHING FUNCTION */
+
+
+var logoDiv = document.querySelector("#logo");
+
+var searchDiv = document.querySelector("#searchbox");
+
+document.querySelector("#searchBtn").addEventListener("click", openSearchBox);
+
+function openSearchBox(event){
+    event.preventDefault();
+    if(logoDiv.style.display == "none"){
+        searchDiv.style.display = "none";
+        logoDiv.style.display = "block";
+        document.querySelector("#searchBtnText").innerText = "Search";
+        showData(jacketsDB);
+    }
+    else{
+        searchDiv.style.display = "block";
+        logoDiv.style.display = "none";
+        document.querySelector("#searchBtnText").innerText = "Remove";
+        document.querySelector("#searchvalue").value = "";
+    }
+}
+
+
+document.querySelector("#searchvalue").addEventListener("keyup", searchProducts);
+
+function searchProducts(event){
+    var searchkey = document.querySelector("#searchvalue").value.toLowerCase();
+
+    if(searchDiv.style.display == "block"){
+        var searchedData = jacketsDB.filter(function(elem, index){
+            return (elem.name.toLowerCase().includes(searchkey));
+        });
+
+        console.log(searchedData);
+        showData(searchedData);
+    }
+    
+}
+

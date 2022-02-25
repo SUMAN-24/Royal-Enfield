@@ -58,6 +58,27 @@ body{
     filter: invert(1);
 }
 
+#searchbox{
+    width: 70%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: right;
+    display:none;
+}
+
+#searchbox input{
+    width: 80%;
+    height: 35px;
+    padding-left: 10px;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+#searchbox input:focus{
+    border: 3px solid #3d72d4;
+    outline: none;
+}
+
 #userArea{
     width: 20%;
     box-sizing: border-box;
