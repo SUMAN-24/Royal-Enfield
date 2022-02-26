@@ -110,10 +110,28 @@ a {
   display: flex;
 }
 .createA {
-  height: 45px;
+  /* height: 45px;
   width: 17%;
   margin-top: 50px;
-  align-items: center;
+  align-items: center; */
+
+  color: #fff;
+  display: inline-block;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: small;
+  text-align: center;
+  padding: 10px 35px 10px 15px;
+  transition: all 0.6s ease;
+  text-transform: none;
+  position: relative;
+  line-height: 14px;
+  border-width: 1.7px;
+  border-style: solid;
+  text-decoration: none !important;
+  background-color: #212529;
+  cursor: pointer !important;
+  align-self: center;
+  border-color: #000;
 }
 .orSignUp {
   /* display: grid;
@@ -125,12 +143,12 @@ a {
   grid-template-rows: 40px;
   gap: 10px;
   /* padding-left: 38px; */
-  padding: 0px 200px 0px 200px;
+  padding: 0px 290px 0px 290px;
 }
 .orSignUp > button:nth-child(1) {
   /* background-color: rgb(24, 51, 146); */
-  width: 90%;
-  height: 36px;
+  width: 95%;
+  height: 34px;
   color: #fff;
   background: #183392;
   border: 1px solid #183392;
@@ -140,8 +158,8 @@ a {
 }
 .orSignUp > button:nth-child(2) {
   /* background-color: rgb(207, 82, 82); */
-  width: 90%;
-  height: 36px;
+  width: 95%;
+  height: 34px;
   color: #fff;
   background: #cf5252;
   border: 1px solid #cf5252;
@@ -151,8 +169,8 @@ a {
 }
 .orSignUp > button:nth-child(3) {
   /* background-color: rgb(79, 185, 238); */
-  width: 90%;
-  height: 36px;
+  width: 95%;
+  height: 34px;
   color: #fff;
   background: #4fb9ee;
   border: 1px solid #4fb9ee;
@@ -163,7 +181,7 @@ a {
 .orSignUp > button {
   color: white;
   /* padding: 10px; */
-  width: 90%;
+  width: 95%;
   text-align: center;
   margin: auto;
 }
@@ -173,7 +191,7 @@ a {
 }
 .createA {
   color: black;
-  background-color: rgb(239, 227, 227);
+  background-color: gainsboro;
   transition: background-color 0.5s;
 }
 .createA:hover {
@@ -183,8 +201,10 @@ a {
 
 .logI {
   color: black;
-  background-color: rgb(239, 227, 227);
+  background-color: gainsboro;
   transition: background-color 0.5s;
+  border-color: #000;
+  border-width: 1.7px;
 }
 .logI:hover {
   color: white;
