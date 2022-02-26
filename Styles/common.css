@@ -26,7 +26,7 @@ html{
 }
 /* NAVBAR STYLE */
 
-#navbar{
+.navbar{
     box-sizing: border-box;
     height: 70px;
     background-color: black;
@@ -41,7 +41,7 @@ html{
     left: 0;
     z-index: 1000;
 }
-#navbar > div{
+.menu, .logo, #login{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -57,7 +57,7 @@ html{
     margin: auto;
     padding-left: 15px;
 }
-#menu{
+.menu{
     width: 45%;
 }
 .links > a{
@@ -83,6 +83,18 @@ html{
     padding-right: 10px;
 }
 
+#dropdownMenu{
+    display: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.menu-line{
+    height: 3px;
+    width: 30px;
+    margin-top: 5px;
+    background-color: white;
+}
 
 
 /* FOOTER PART BEGINS */
@@ -107,6 +119,7 @@ footer{
     padding: 20px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     
@@ -291,4 +304,112 @@ ul{
         cursor: pointer;
         color: #d1291c;
     }
+}
+
+
+@media all and (max-width: 400px){
+    .navbar{
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 100%;
+        height: 60px;
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
+    .navbar-active{
+        height: 100vh;
+    }
+
+    .logo{
+        width: 30%;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        padding: 5px;
+    }
+
+    .logo img{
+        width: 100%;
+    }
+
+    .menu{
+        flex-direction: column;
+        margin-top: 10%;
+        display: none;
+    }
+
+    .menu > .links{
+        width: 110vw;
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid grey;
+    }
+
+    .menu > .links > a{
+        color: blue;
+        font-size: 12px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .menu > .links > a:hover{
+        color: #d1291c;
+        text-decoration: none;
+    }
+
+
+    #login{
+        display: none;
+    }
+
+    #dropdownMenu{
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    .active{
+        display: block !important;
+    }
+
+    #footerIconsDiv{
+        height: 250px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    #footerIconsDiv > .footerIcons{
+        width: 100%;
+        cursor: pointer;
+    }
+
+
+    .footerIcons > div{
+        height: 50%;
+    }
+
+    .footerIcons i{
+        font-size: 25px;
+        color: grey;
+    }
+    
+    .footerIconText{
+        height: 30%;
+        font-size: 32px;
+        font-weight: bold;
+        /* margin-top: 10px; */
+        color: grey;
+        cursor: pointer;
+    }
+    
+    .footerIconText:hover{
+        color: #d1291c;
+    }
+
 }
