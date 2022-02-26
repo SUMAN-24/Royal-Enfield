@@ -45,6 +45,12 @@ html{
     cursor: pointer;
 }
 
+.smallbuttons{
+    display: none;
+    top: 80%;
+    left: 50%;
+}
+
 #play{
     display: none;
 }
@@ -736,9 +742,20 @@ html{
 /* CSS MEDIA QUERIES */
 
 @media all and (max-width: 400px){
-       /* TRIBUTE DIV */
 
-       #tributeDiv{
+    /* JOURNEY DIV */
+
+    .bigbuttons{
+        display: none;
+    }
+
+    .smallbuttons{
+        display: block;
+    }
+
+    /* TRIBUTE DIV */
+
+    #tributeDiv{
         background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/home/banner/mobile/royal-enfield-south-pole.png");   
         background-size: cover;
         height: 450px;

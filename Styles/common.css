@@ -83,6 +83,14 @@ html{
     padding-right: 10px;
 }
 
+#userLoginIcon{
+    display: none;
+}
+
+#userLoginIcon a{
+    color: #fff;
+}
+
 #dropdownMenu{
     display: none;
     font-size: 18px;
@@ -337,20 +345,21 @@ ul{
     }
 
     .menu{
+        width: 100vw;
         flex-direction: column;
-        margin-top: 10%;
+        margin-top: 20%;
         display: none;
     }
 
     .menu > .links{
-        width: 110vw;
+        /* width: 110vw; */
         text-align: center;
         padding: 15px;
         border-bottom: 1px solid grey;
     }
 
     .menu > .links > a{
-        color: blue;
+        color: #ffffff;
         font-size: 12px;
         font-weight: bold;
         text-decoration: none;
@@ -366,6 +375,13 @@ ul{
         display: none;
     }
 
+    #userLoginIcon{
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 15%;
+    }
+
     #dropdownMenu{
         display: block;
         position: absolute;
@@ -376,6 +392,10 @@ ul{
     .active{
         display: block !important;
     }
+
+
+
+    /* FOOTER MEDIA QUERIES*/
 
     #footerIconsDiv{
         height: 250px;
