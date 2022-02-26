@@ -11,13 +11,14 @@ var form= document.querySelector("#form");
 
     var user = form.userId.value;
     var country= form.Country.value;
+    var found = false;
     console.log(user,country);
     
     for (var i = 0; i < regdUsers.length; i++) {
       if ((regdUsers[i].Email== user || regdUsers[i].Mobile==user) && 
             regdUsers[i].Country == country) {
-
-      alert("Email verification sent")
+            alert("Email verification sent to your registered email-id.")
+            found = true;
       
       }
       else if(user==""){
@@ -28,8 +29,12 @@ var form= document.querySelector("#form");
       else if(country==""){
           alert("Select Country")
       }
-      else if((regdUsers[i].Email !== user || regdUsers[i].Mobile !== user) && regdUsers[i].Country !==country){
-        alert("Match not found!")
-      }
     }
+
+    if(!found){
+        alert("User not found in database. Please check your credentials again.")
+    }
+
+    form.userId.value = "";
+    form.Country.valu = "AF";
   }

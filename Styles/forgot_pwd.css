@@ -127,6 +127,10 @@ span:hover {
   padding-left: 15px;
 }
 
+#userId{
+    padding-left: 15px;
+}
+
 option {
   color: black;
 }
@@ -151,7 +155,8 @@ p {
 #createAcc {
   color: #fff;
   display: inline-block;
-  font-family: "Libre Franklin", sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
   font-size: small;
   text-align: center;
   padding: 10px 35px 10px 15px;
@@ -165,6 +170,7 @@ p {
   background: 0;
   cursor: pointer !important;
   align-self: center;
+  margin-left: 25px;
 }
 #createAcc:hover {
   background-color: #fff;
