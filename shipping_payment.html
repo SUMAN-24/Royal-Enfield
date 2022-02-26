@@ -27,15 +27,15 @@
                     </div>
                     <form action="" class="address" id="shippingAddress">
                         <div class="name">
-                            <input type="text" name="" id="firstName"  placeholder="First Name*">
-                            <input type="text" name="" id="lastName"  placeholder="Last Name*">
+                            <input type="text" name="" id="firstName"  placeholder="First Name*"  required>
+                            <input type="text" name="" id="lastName"  placeholder="Last Name*" required>
                         </div>
-                        <input type="text" name="" id="address1" placeholder="Address 1*"><br>
-                        <input type="text" name="" id="address2" placeholder="Address 2*">
+                        <input type="text" name="" id="address1" placeholder="Address 1*" required><br>
+                        <input type="text" name="" id="address2" placeholder="Address 2*" required>
                         <div class="area">
-                            <input type="text" name="" id="city" placeholder="City*">
+                            <input type="text" name="" id="city" placeholder="City*" required>
                             <!-- <input type="text" name="" id="state" placeholder="State/Provice*"> -->
-                            <select name="state" id="state">
+                            <select name="state" id="state" required>
                                 <option value="--">Select Your State</option>
                                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                                 <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -76,8 +76,8 @@
                                 </select>
                             <input type="text" name="" id="country" placeholder="Country*" value="India" disabled>
                         </div>
-                        <input type="number" name="" id="mobile" placeholder="Mobile*"><br>
-                        <input type="number" name="" id="pin" placeholder="Enter PIN Code"><br>
+                        <input type="number" name="" id="mobile" placeholder="Mobile*" required><br>
+                        <input type="number" name="" id="pin" placeholder="Enter PIN Code" required><br>
                         <input type="submit" value="NEXT" id="addnext">
                     </form>
                 </div>
@@ -116,10 +116,10 @@
                         <form action="" id="payment-info">
                             <div class="card-input">
                                 <label for="">Card Number</label><br>
-                                <input type="number" name="" id="cardNo"><br>
+                                <input type="number" name="" id="cardNo" required><br>
                                 <label for="">Expiration Date</label>
                                 <div>
-                                    <select name="" id="expmonth">
+                                    <select name="" id="expmonth" required>
                                         <option value="">Month</option>
                                         <option value="1">01 - January</option>
                                         <option value="2">02 - February</option>
@@ -134,7 +134,7 @@
                                         <option value="11">11 - November</option>
                                         <option value="12">12 - December</option>
                                     </select>
-                                    <select name="" id="expyear">
+                                    <select name="" id="expyear" required>
                                         <option value="">Year</option>
                                         <option value="2022">2022</option>
                                         <option value="2023">2023</option>
@@ -150,7 +150,7 @@
                                 <label for="">Name On Card</label><br>
                                 <input type="text" id="cardName"><br>
                                 <label for="">CVV</label><br>
-                                <input type="number" id="cvv">
+                                <input type="number" id="cvv" required>
                                 <input type="submit" name="" id="paymentBtn" value="CONFIRM ORDER">
                             </div>
                         </form>
