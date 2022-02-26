@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form | Royal Enfield India'</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Libre+Franklin:wght@500&family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Libre+Franklin:wght@500&family=Montserrat:wght@600&family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+
+    <!-- CSS LINK -->
     <link rel="stylesheet" href="./Styles/common.css"/>
     <link rel="stylesheet" href="./Styles/signup_page.css"/>
         <!-- FONT AWESOME -->
@@ -108,10 +112,10 @@
         <div id="inpt">
             <div>
                         <div>
-                            <input type="text" placeholder="First Name" class="firNam" value="">
+                            <input type="text" placeholder="First Name" class="firNam" value="" required>
                         </div>
                         <div>
-                            <input type="text" placeholder="Last Name" class="lasNam" value=""/>
+                            <input type="text" placeholder="Last Name" class="lasNam" value="" required/>
                         </div>
             </div>
 
@@ -130,10 +134,10 @@
 
             <div>
                         <div>
-                            <input type="text" placeholder="Email" class="emai" value=""/>
+                            <input type="text" placeholder="Email" class="emai" value="" required/>
                         </div>
                         <div>
-                            <input type="password" placeholder="Password" class="passW" value=""/>
+                            <input type="password" placeholder="Password" class="passW" value="" required/>
                         </div>
             </div>
 
@@ -145,7 +149,7 @@
                       </div>
 
                       <div>
-                          <input type="number" placeholder="Mobile Number" value="" class="phon"/>
+                          <input type="number" placeholder="Mobile Number" value="" class="phon" required/>
                       </div>
             </div>
 
@@ -204,7 +208,9 @@
                 Already have a Royal Enfield account
             </h1>
              <div align="center">
-                <button class="logI" >Login &nbsp; ></button>
+                <button class="logI" >
+                    <a href="login.html">Login &nbsp; ></a>
+                </button>
              </div>
     </div>
 
