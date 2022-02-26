@@ -578,3 +578,122 @@ a.order, a.order:hover{
     font-size: 20px;
     margin-left: 10px;
 }
+
+
+
+
+@media all and (max-width: 800px){
+    
+    #navbar{
+        justify-content: space-between;
+    }
+
+    #logo{
+        width: 60%;
+        text-align: right;
+        padding: 20px;
+    }
+
+    #logo img{
+        width: 100%;
+    }
+
+    #userArea{
+        width: 20%;
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .icontxt{
+        display: none;
+    }
+
+    #searchbox{
+        width: 50%;
+    }
+
+    #searchbox input{
+        font-size: 14px;
+        height: 30px;
+    }
+
+    .icons{
+        display: block;
+        margin-left: -5px;
+    }
+
+    #userArea > a:not(:nth-child(3)){
+        display: none;
+    }
+
+
+
+
+
+
+    #footerMain{
+        height: 150px;
+    }
+
+    #footerLinks{
+       flex-direction: row;
+       justify-content: space-between;
+       cursor: pointer;
+    }
+
+    .aboutUsLinks{
+        display: none;
+    }
+
+    #footerLinks input{
+        display: none;
+    }
+
+    a.order{
+        display: none;
+    }
+
+    #keeptouch > p:nth-child(2){
+        display: none;
+    }
+
+    #store > p:not(p:first-child){
+        display: none;
+    }
+
+    #copyrightText{
+        margin-top: -15px;
+    }
+
+    #socialIcons i{
+        color: white;
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    #bodyContainer{
+        flex-direction: column;
+    }
+
+    #cartArea{
+        width: 100%;
+    }
+
+    .cartItemQty{
+        flex-direction: column;
+    }
+
+    .cartItemName{
+        font-size: 12px;
+    }
+
+    .cartItemPrice, .cartItemTotal{
+        font-size: 12px;
+    }
+
+    #totalArea{
+        width: 80%;
+    }
+}

@@ -18,6 +18,7 @@ body{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     /* border: 2px solid red; */
     box-sizing: border-box;
     position: sticky;
@@ -547,4 +548,124 @@ a.order, a.order:hover{
     color: white;
     font-size: 20px;
     margin-left: 10px;
+}
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media all and (max-width:700px){
+
+    #navbar{
+        justify-content: space-between;
+    }
+
+    #logo{
+        width: 60%;
+        text-align: right;
+        padding: 20px;
+    }
+
+    #logo img{
+        width: 100%;
+    }
+
+    #userArea{
+        width: 20%;
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .icontxt{
+        display: none;
+    }
+
+    #searchbox{
+        width: 50%;
+    }
+
+    #searchbox input{
+        font-size: 14px;
+        height: 30px;
+    }
+
+    .icons{
+        display: block;
+        margin-left: -5px;
+    }
+
+    #userArea > a:nth-child(2){
+        display: none;
+    }
+
+    #bannerText{
+        display: none;
+    }
+
+    #filterDiv{
+        display: none;
+    }
+
+    /* #filterArea{
+        width: 20%;
+        flex-direction: flex-start;
+    } */
+
+    #displayDiv{
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 350px;
+    }
+
+    .sizeSelector{
+        width: 40%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: auto;
+    }
+
+    #footerMain{
+        height: 150px;
+    }
+
+    #footerLinks{
+       flex-direction: row;
+       justify-content: space-between;
+       cursor: pointer;
+    }
+
+    .aboutUsLinks{
+        display: none;
+    }
+
+    #footerLinks input{
+        display: none;
+    }
+
+    a.order{
+        display: none;
+    }
+
+    #keeptouch > p:nth-child(2){
+        display: none;
+    }
+
+    #store > p:not(p:first-child){
+        display: none;
+    }
+
+    #copyrightText{
+        margin-top: -15px;
+    }
+
+    #socialIcons i{
+        color: white;
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
 }

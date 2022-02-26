@@ -67,7 +67,7 @@ a.services:hover{
     height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 300px 300px;
+    grid-template-rows: auto;
 }
 
 /* #bikesDisplay > div{
@@ -125,4 +125,48 @@ a.bikeButton:hover{
 
 .bikes:hover > .bikeExplore{
     top: 67%;
+}
+
+
+
+@media all and (max-width: 400px){
+    #bikeServices{
+        display: none;
+    }
+
+    #bikesDisplay{
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 300px;
+    }
+}
+
+
+@media all and (min-width: 401px) and (max-width: 700px){
+
+    #bikesDisplay{
+        width: 70%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+    }
+
+    .bikeExplore{
+        top: 70%;
+    }
+
+    #bikeServices{
+        width: 30%;
+    }
+
+    .bikes:hover > .bikeExplore{
+        top: 50%;
+    }
+
+    a.bikeButton{
+        width: 50%;
+    }
+
+    #footerIconsDiv{
+        display: none;
+    }
 }

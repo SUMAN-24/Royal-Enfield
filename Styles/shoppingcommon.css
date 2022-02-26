@@ -169,3 +169,50 @@ a.order, a.order:hover{
     font-size: 20px;
     margin-left: 10px;
 }
+
+
+
+/* MEDIA QUERIES */
+
+
+@media all and (min-width: 50px) and (max-width: 500px){
+    #footerMain{
+        height: 150px;
+    }
+
+    #footerLinks{
+       flex-direction: row;
+       justify-content: space-between;
+       cursor: pointer;
+    }
+
+    .aboutUsLinks{
+        display: none;
+    }
+
+    #footerLinks input{
+        display: none;
+    }
+
+    a.order{
+        display: none;
+    }
+
+    #keeptouch > p:nth-child(2){
+        display: none;
+    }
+
+    #store > p:not(p:first-child){
+        display: none;
+    }
+
+    #copyrightText{
+        margin-top: -15px;
+    }
+
+    #socialIcons i{
+        color: white;
+        font-size: 12px;
+        margin-left: 10px;
+    }
+}

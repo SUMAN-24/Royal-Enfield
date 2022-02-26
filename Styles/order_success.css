@@ -138,3 +138,95 @@ body{
 .dislikebtn:hover{
     color: red;
 }
+
+
+@media all and (min-width: 50px) and (max-width: 800px){
+    #mainContent{
+        width: 90%;
+    }
+
+    #confirmMsg{
+        width: 80%;
+    }
+
+    #orderMsg{
+        width: 70%;
+        margin-top: -20px;
+    }
+
+    #orderMsg h3{
+        font-size: 16px;
+    }
+
+    #shoppingBtn{
+        width: 70%;
+        margin-top: -5px;
+    }
+
+    #shoppingBtn a{
+        font-size: 14px;
+    }
+    #shoppingBtn a:hover{
+        font-size: 14px;
+    }
+
+    #feedback{
+        width: 70%;
+        /* margin-top: -10px; */
+    }
+
+    #feedback h3{
+        font-size: 16px;
+    }
+
+    #feedback i{
+        margin-left: 20px;
+    }
+}
+
+
+@media all and (min-width: 50px) and (max-width: 525px){
+    #mainContent{
+        width: 90%;
+    }
+
+    #confirmMsg{
+        width: 90%;
+        justify-content: center;
+    }
+
+    #confirmMsg h1{
+        font-size: 22px;
+    }
+
+    #orderMsg{
+        width: 90%;
+        margin-top: -20px;
+    }
+
+    #orderMsg h3{
+        font-size: 14px;
+    }
+
+    #shoppingBtn{
+        width: 70%;
+        margin-top: -5px;
+    }
+
+    #shoppingBtn a{
+        font-size: 14px;
+    }
+
+    #feedback{
+        width: 90%;
+        /* margin-top: -10px; */
+    }
+
+    #feedback h3{
+        font-size: 16px;
+    }
+
+    #feedback i{
+        margin-left: 20px;
+    }
+}
