@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.storeLocat{
+    font-family: 'Open Sans', sans-serif;
+}
+
+#topImgBanner{
+    width: 100%;
+    height: 70vh;
+}
+
+#topImgBanner img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#interceptorHeader{
+    box-sizing: border-box;
+    display:flex;
+    background-color: #212121;
+    /* border: 1px solid red; */
+    height: 60px;
+    justify-content: space-between;
+    /* font-family: 'Open Sans', sans-serif; */
+    padding: 5px;
+    color: white;
+    align-items: center;
+}
+
+#headerLinks{
+    box-sizing: border-box;
+    display:flex;
+    background-color: #212121;
+    /* border: 1px solid red; */
+    height: 60px;
+    justify-content: space-between;
+    /* font-family: 'Open Sans', sans-serif; */
+    padding: 5px;
+    color: white;
+    align-items: center;
+}
+#headerLinks>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+#headerLinks > div:first-child{
+    font-size: 20px;
+    padding: 18px;
+    font-weight: bolder;
+}
+
+.access{
+    margin-left: 20px;
+}
+.access>a{
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.access>a:hover{
+    color: #d1291c;
+    text-decoration: none;
+}
+
+
+/* BREADCRUMBS NAVBAR */
+
+#breadcrumbs{
+    box-sizing: border-box;
+    background-color: #212121;
+    height: 40px;
+    padding: 10px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#breadcrumbs i{
+    padding-left: 20px;
+}
+
+#breadcrumbs p{
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+
+.innerNAV
+{
+    color: white;
+    background-color: #212121;
+    width: 100%;
+}
+.innerNAV>h2
+{
+    padding: 14px 0px 15px 20px;
+}
+  .innerNAV>h5
+  {
+      padding: 0px 0px 10px 25px;
+  }
+.storeLocat
+{
+    display:grid;
+    grid-template-columns: 63% 37%;
+    grid-template-areas: "a b";
+}
+.storeLocat>div:first-child>h3
+{
+    padding: 15px 0px 25px;
+    font-weight: 500px;
+}
+.storeLocat>div:nth-child(1)
+{
+    padding: 20px;
+    grid-area: a;
+}
+.storeLocat>div:nth-child(2)
+{
+    grid-area: b;
+}
+.storeLocat>div:first-child>p
+{
+    margin-bottom: 25px;
+}
+.inputSELECT,.aDDress
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+.inputSELECT>div,.inputSELECT+ div,.inputSELECT>div>select,.inputSELECT+ div>select
+{
+    height:50px;
+    width: 100%;
+}
+.inputSELECT>div
+{
+    margin-bottom: 15px;
+}
+.mapLUCk>img
+{
+    width: 100%;
+    height: 870px
+}
+.aDDress>div>img
+{
+  width:100%
+}
+.aDDress
+{
+    padding-top: 20px;
+}
+.diSTAnce
+{
+    padding: 20px 0px;
+}
+.diSTAnce
+{
+    display: flex;
+    justify-content: space-between;
+    gap:20%
+}
+.storeLocat p
+{
+     margin-bottom: 5px;
+     font-weight: 600;
+     font-size: 14px;
+}
+.storeLocat h4
+{
+    padding: 20px 0px;
+}
+.storeLocat button
+{
+    margin: 20px 0px;
+}
+.ButTON
+{
+    border: 2px solid black;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 10px;
+    font-weight: bold;
+}
+.ButTON:hover{
+    filter: invert(1);
+}
+
+
+@media  (max-width:767px)
+{
+
+      .storeLocat
+       {
+          display:grid;
+          grid-template-columns:repeat(1,1fr);
+          grid-template-areas:
+           "b"
+           "a";
+      }
+        
+     .inputSELECT,.aDDress
+          {
+              display: grid;
+              grid-template-columns: repeat(1,1fr);
+              gap: 20px;
+          }
+          .maiNIMAge
+          {
+              visibility: hidden;
+              height: 0px;
+          }
+
+}
