@@ -3,16 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-body::-webkit-scrollbar
-{
-    width: 5px;
-    background-color: grey;
-}
-body::-webkit-scrollbar-thumb
-{
-    width: 5px;
-    background-color: black;
-}
 
 *{
     margin: 0px;
@@ -27,28 +17,6 @@ img
     height: 100%;
 }
 
-/* BODY AREA */
-
-/* #heading{
-    width: 100%;
-    color: #ffffff;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 15px;
-    background-color: #212121;  */
-}
-
-/* MAIN BIKE CONTAINER DIV */
-
-/* #bikeContainer{
-    width: 100%;
-    height: 600px;
-    display: flex;
-} */
-/* #bikeServices{
-    width: 25%;
-    height: 100%;
-} */
 
 a.services{
     display: block;
@@ -62,12 +30,7 @@ a.services{
     font-weight: bold;
     font-size: 14px;
 }
-a.services:hover{
-    text-decoration: none;
-    background-color: lightgray;
-}
 
-/* BIKE DISPLAY AREA - GRID 2x3 */
 
 #bikesDisplay{
      width:100%;
@@ -77,8 +40,6 @@ a.services:hover{
 }
 
 #bikesDisplay>div{
-
-   border: solid 2px red;
    width:100%;
 }
 div.bikes{
@@ -135,11 +96,15 @@ a,h3
                         #bikesDisplay{
                             display: grid;;
                             grid-template-columns: repeat(1,1fr);
-                            grid-template-rows: repeat(5,600px);
+                            grid-template-rows: repeat(2,600px);
                             gap: 0%;
                         }
                         .bikeImg{
                             width: 100%;
                             height: 100%;
                         }
+                        #bikeContainer{
+
+                           margin-bottom: 800px;
+                         }
                     }
