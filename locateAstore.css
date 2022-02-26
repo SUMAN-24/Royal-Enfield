@@ -1,0 +1,116 @@
+.innerNAV
+{
+    color: white;
+    background-color: #212121;
+    width: 100%;
+}
+.innerNAV>h2
+{
+    padding: 14px 0px 15px 20px;
+}
+  .innerNAV>h5
+  {
+      padding: 0px 0px 10px 25px;
+  }
+.storeLocat
+{
+    display:grid;
+    grid-template-columns: 63% 37%;
+    grid-template-areas: "a b";
+}
+.storeLocat>div:first-child>h3
+{
+    padding: 15px 0px 25px;
+    font-weight: 500px;
+}
+.storeLocat>div:nth-child(1)
+{
+    padding: 20px;
+    grid-area: a;
+}
+.storeLocat>div:nth-child(2)
+{
+    grid-area: b;
+}
+.storeLocat>div:first-child>p
+{
+    margin-bottom: 25px;
+}
+.inputSELECT,.aDDress
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+.inputSELECT>div,.inputSELECT+ div,.inputSELECT>div>select,.inputSELECT+ div>select
+{
+    height:50px;
+    width: 100%;
+}
+.inputSELECT>div
+{
+    margin-bottom: 15px;
+}
+.mapLUCk>img
+{
+    width: 100%;
+    height: 852px
+}
+.aDDress>div>img
+{
+  width:100%
+}
+.aDDress
+{
+    padding-top: 20px;
+}
+.diSTAnce
+{
+    padding: 20px 0px;
+}
+.diSTAnce
+{
+    display: flex;
+    justify-content: space-between;
+    gap:20%
+}
+.storeLocat p
+{
+     margin-bottom: 5px;
+     font-weight: 600;
+     font-size: 14px;
+}
+.storeLocat h4
+{
+    padding: 20px 0px;
+}
+.storeLocat button
+{
+    margin: 20px 0px;
+}
+
+@media  (max-width:767px)
+{
+
+      .storeLocat
+       {
+          display:grid;
+          grid-template-columns:repeat(1,1fr);
+          grid-template-areas:
+           "b"
+           "a";
+      }
+        
+     .inputSELECT,.aDDress
+          {
+              display: grid;
+              grid-template-columns: repeat(1,1fr);
+              gap: 20px;
+          }
+          .maiNIMAge
+          {
+              visibility: hidden;
+              height: 0px;
+          }
+
+}
