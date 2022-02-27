@@ -3,7 +3,7 @@ one of the oldest motorcycles manufacturing company in the world. Its popularly 
 
 We developed this project in 6 days.
 
-Tech stack used - HTML, CSS, JavaScript
+Tech stack used - HTML 5, CSS 3, JavaScript
 
 Some features we developed in our project:
 
