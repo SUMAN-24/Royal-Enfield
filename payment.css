@@ -1,0 +1,161 @@
+body{
+    margin: 0;
+}
+.royal_img{
+    width: 100%;
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.royal_img>img{
+    filter: invert(1);
+    margin: 20px 0;
+}
+
+
+.container{
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 20px;
+}
+.email{
+    width: 65%;
+    margin: 20px 20px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.email >input{
+    width: 97%;
+    height: 35px;
+}
+.email>p>a{
+    color: red;
+}
+/* SHIPPING ADDRESS */
+.checkout{
+    width: 95%;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+.address{
+    width: 92%;
+    margin-left: 10px;
+    padding: 20px;
+    margin: 0%;
+   
+}
+.address>input{
+    height: 35px;
+    width: 97.5%;
+    margin-top: 15px;
+}
+.name{
+    display: flex;
+}
+.name>input{
+    width: 50%;
+    height: 35px;
+    margin: 10px 10px 0 0;
+}
+#addnext{
+    width: 15%;
+    background-color: #000;
+    color: white;
+}
+button{
+    background-color: red;
+    border: 0px;
+    width: 91%;
+    height: 45px;
+    margin: 0 0 0 20px;
+}
+/* SHIPPING METHOD */
+.method{
+    width: 92%;
+    padding: 20px;
+    margin: 0;
+}
+.prepaid{
+    display: flex;
+}
+.cod{
+    display: flex;
+    justify-content: space-between;
+}
+/* card type */
+.payment{
+    padding: 20px;
+    display: flex;
+    margin: auto;
+    height: 450px;
+    padding-left: 0px;
+}
+.payment_option{
+    width: 100%;
+    display: flex;
+}
+.card-option{
+    width: 40%;
+}
+.card{
+    border-top: 0px;
+    border-bottom: #ccc solid 0.5px;
+    background: #fafafa;
+    color: #333;
+    height: 55px;
+    border-left: #ccc solid 1px;
+    border-right: 0px;
+    text-align: left;
+    display: block;
+    padding: 15px 16px 15px 17px;
+    width: 100%;
+    font-weight: 600;
+}
+.card:active{
+    background-color: lightgrey;
+}
+
+/* card information */
+#payment-info{
+    width: 90%;
+    padding: 0 25px 0 25px;
+}    
+
+.card-input > input{
+    margin: 10px 0;
+    width: 95%;
+    height: 28px;
+    padding: 10px 5px 0 5px;
+}
+#cvv{
+    width: 60%;  
+}
+.card-input > div {
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.card-input > div > select{
+    width: 50%;
+    height: 45px;
+    margin: 10px 10px 0 0;
+    padding: 10px 5px 0 5px;
+}
+
+#submit{
+    width: 98%;
+    height: 45px;
+    background: #000;
+    color: white;
+    border: 1px solid #000;
+}
+
+/* bill details */
+.item-deatil{
+    width: 90%;
+    margin-left: 0px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    border-radius: 5px;
+}
