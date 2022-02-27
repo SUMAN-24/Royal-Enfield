@@ -11,4 +11,4 @@ Some features we developed in our project:
 2. Log-in and Sign-up for users 
 3. Developed the Royal Enfield Jackets Section
 4. Branded Merchandise Shopping - from viewing products to complete payment option.
-
+5.Contributers name-Abinash ,Suman,Rohit,Ayush,Gaurav and Sunil
