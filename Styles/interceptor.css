@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+*{
+    margin: 0px;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+} 
+
+
+/* MAIN BODY CONTAINER */
+
+#interceptorHeader{
+    box-sizing: border-box;
+    display:flex;
+    background-color: #212121;
+    /* border: 1px solid red; */
+    height: 60px;
+    justify-content: space-between;
+    /* font-family: 'Open Sans', sans-serif; */
+    padding: 5px;
+    color: white;
+    align-items: center;
+}
+
+#headerLinks{
+    box-sizing: border-box;
+    display:flex;
+    background-color: #212121;
+    /* border: 1px solid red; */
+    height: 60px;
+    justify-content: space-between;
+    /* font-family: 'Open Sans', sans-serif; */
+    padding: 5px;
+    color: white;
+    align-items: center;
+}
+#headerLinks>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+#headerLinks > div:first-child{
+    font-size: 20px;
+    padding: 18px;
+    font-weight: bolder;
+}
+
+.access{
+    margin-left: 20px;
+}
+.access>a{
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.access>a:hover{
+    color: #d1291c;
+    text-decoration: none;
+}
+
+#configure, #bookride{
+    height: 40px;
+    width: 150px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 0px;
+    margin-right: 15px;
+}
+
+#configure{
+    background-color: #e5e3e3;
+}
+
+#bookride{
+    background-color: #da291c;
+    color: #fff;
+}
+
+
+/* BREADCRUMBS NAVBAR */
+
+#breadcrumbs{
+    box-sizing: border-box;
+    background-color: #212121;
+    height: 40px;
+    padding: 10px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#breadcrumbs i{
+    padding-left: 20px;
+}
+
+#breadcrumbs p{
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+
+/* TOP IMAGE BANNER */
+
+#topImageBanner{
+    width: 100%;
+    height: 100vh;
+}
+
+#topImageBanner img{
+    width: 100%;
+    height: 100%;
+    /* filter: brightness(0.8); */
+}
+
+
+/* REVIEW IMAGE BANNER */
+
+#reviewImgBanner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.bannerImg{
+    width: 100%;
+    height: 100%;
+}
+
+a.explore{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    padding-right: 20px;
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    text-decoration: none;
+}
+
+a.explore:hover{
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+}
+
+
+
+/* INTERCEPTOR STORY BANNER */
+
+#interceptorStory{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+
+#interceptorStory p{
+    position: absolute;
+    color: #fff;
+    font-size: 16px;
+    width: 20%;
+    top: 30%;
+    left: 10%;
+}
+
+#interceptorStory a{
+    top: 70%;
+    left: 10%;
+}
+
+
+/* EASY COME EASY GO BANNER */
+#easygoStory{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+
+#easygoStory p{
+    position: absolute;
+    color: #fff;
+    font-size: 16px;
+    width: 25%;
+    top: 30%;
+    left: 10%;
+}
+
+/* HEART OF IT ALL STORY */
+
+#performanceStory{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+
+#performanceStory p{
+    position: absolute;
+    color: #fff;
+    font-size: 16px;
+    width: 25%;
+    top: 30%;
+    right: 10%;
+}
+
+/* SMOOTH OPERATOR */
+
+#smoothStory{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+
+#smoothStory p{
+    position: absolute;
+    color: #fff;
+    font-size: 16px;
+    width: 25%;
+    top: 30%;
+    right: 10%;
+}
+
+
+/* PERSONALISE MAKE IT YOURS */
+
+#personaliseStory{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+
+#personaliseStory p{
+    position: absolute;
+    color: #fff;
+    font-size: 16px;
+    width: 25%;
+    top: 30%;
+    left: 10%;
+}
+
+#personaliseStory a{
+    left: 10%;
+    top: 50%;
+}
+
+
+
+/* BIKE CAROUSAL IF DONE */
+
+
+
+/* SPECIFICATIONS STORY */
+#specStory{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+
+#specStory a{
+    left: 10%;
+}
+
+/* QUICKSTART GUIDE */
+
+#quickstart{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+
+#quickstart h2{
+    position: absolute;
+    color: #fff;
+    font-size: 18px;
+    top: 45%;
+    left: 10%;
+}
+
+#quickstart a{
+    top: 52%;
+    left: 10%;
+}
+
+
+/* Gallery Div */
+
+#galleryDiv{
+    width: 100%;
+    height: 100vh;
+}
+
+#galleryDiv div{
+    box-sizing: border-box;
+}
+
+#galleryDiv > div:first-child{
+    text-align: center;
+    color: white;
+    background-color: #212121;
+    padding: 10px;
+}
+
+#galleryContainer{
+    width: 100%;
+    height: 95%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50% 50%;
+}
+
+#galleryContainer > div{
+    /* border: 1px solid blue; */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#galleryContainer > div img:hover{
+    transform: scale(1.1);
+    transition: 0.5s all ease;
+}
+
+.galleryimg{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* RECOMMENDED GEAR */
+#recommended{
+    width: 100%;
+    margin-bottom: -10px;
+}
+
+#recommended div{
+    box-sizing: border-box;
+}
+
+#recommended > div:first-child{
+    text-align: center;
+    color: white;
+    background-color: #212121;
+    padding: 20px;
+}
+
+#recommendedDiv{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#recommendedDiv p{
+    position: absolute;
+    color: #fff;
+    font-size: 16px;
+    width: 25%;
+    top: 45%;
+    left: 10%;
+}
+
+#recommendedDiv a{
+    left: 10%;
+    top: 52%;
+}
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media all and (max-width: 800px){
+    #galleryContainer{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50% 50%;
+    }
+
+    #personaliseStory p, #smoothStory p, #recommendedDiv p, #performanceStory p, #easygoStory p, #interceptorStory p{
+        display: none;
+    }
+
+    #reviewImgBanner > a{
+        top: 80%;
+        left: 35%;
+    }
+
+    #buttons{
+        display: none;
+    }
+
+}
+
+
+@media all and (min-width: 50px) and (max-width: 500px){
+    #reviewImgBanner > a{
+        top: 80%;
+        left: 30%;
+    }
+
+    #headerLinks > div{
+        display: none;
+    }
+
+    #headerLinks > div:first-child{
+        display: block;
+        text-align: center;
+    }
+}

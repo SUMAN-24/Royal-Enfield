@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8d91ab7046.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./Styles/order_success.css">
+    <link rel="stylesheet" href="./Styles/shoppingcommon.css">
+
+    <link rel="icon" type="image/x-icon" href="https://store.royalenfield.com/media/favicon/stores/1/favicon-128x128.png">
+    <title>Order Summary | Royal Enfield</title>
+</head>
+<body>
+    <!-- HEADER => NAVBAR AREA -->
+    <div id="navbar">
+        <div id="logo">
+            <a href="#">
+                <img src="https://store.royalenfield.com/media/logo/stores/1/logo.png" alt="Royal Enfield Store">
+            </a>
+        </div>
+    </div>
+
+
+    <!-- MAIN BODY CONTAINER -->
+
+    <div id="topBodyContainer">
+        <div id="mainContent">
+            <div id="confirmMsg">
+                <h1><i class="fa-solid fa-circle-check"></i></h1>
+                <h1>Order Confirmed!</h1>
+            </div>
+
+            <div id="orderMsg">
+                <h3>
+                    Thank you for purchasing with Royal Enfield India. 
+                </h3>
+                <h3>
+                    Your order will be shipped to the provided address within 5-7 business days.
+                </h3>
+                <h3>
+                    We will also send you an order confirmation mail and order tracking details to your registered email-id.
+                </h3>
+            </div>
+
+            <div id="shoppingBtn">
+                <button>
+                    <a href="apparel_landing.html">
+                        <i class="fa-solid fa-arrow-left-long"></i> &nbsp; CONTINUE SHOPPING
+                    </a>
+                </button>
+            </div>
+
+            <div id="feedback">
+                <h3>Please share your shopping experience with us</h3>
+                <div id="like">
+                    <h3> <i class="fa-solid fa-thumbs-up likebtn"></i>  </h3>
+                </div>
+                <div id="dislike">
+                    <h3> <i class="fa-solid fa-thumbs-down dislikebtn"></i> </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- FOOTER AREA -->
+    <footer>
+        <div id="iconsPolicy">
+            <div>
+                <div class="iconAdd">
+                    <i class="fa-solid fa-plane-departure"></i>
+                </div>
+                <p>Shipping Policy</p>
+            </div>
+            <div>
+                <div class="iconAdd">
+                    <i class="fa-solid fa-rotate"></i>
+                </div>
+                <p>Exchange Policy</p>
+            </div>
+            <div>
+                <div class="iconAdd">
+                    <i class="fa-solid fa-circle-question"></i>
+                </div>
+                <p>FAQ's</p>
+            </div>
+        </div>
+
+        
+        <div id="footerMain">
+            <div id="footerLinks">
+                <div id="aboutus">
+                    <p class="linkHeading">Royal Enfield</p>
+                    <a href="" class="aboutUsLinks">About us</a>
+                    <a href="" class="aboutUsLinks">Motorcycle</a>
+                    <a href="" class="aboutUsLinks">Media & Events</a>
+                    <a href="" class="aboutUsLinks">Career</a>
+                    <a href="" class="aboutUsLinks">Forum</a>
+                    <a href="" class="aboutUsLinks">Contact us</a>
+                </div>
+                <div id="store">
+                    <p class="linkHeading">Bulk Order</p>
+                    <a href="" class="order">
+                        Place a Bulk Order
+                    </a>
+                    <p class="linkHeading">Store Locator</p>
+                    <a href="" class="order">
+                        Find a store
+                    </a>
+                    <p class="linkHeading">Track Order</p>
+                    <a href="" class="order">
+                        Track Your Order
+                    </a>
+                </div>
+                <div id="keeptouch">
+                    <p class="linkHeading">Keep In Touch</p>
+                    <p>
+                        Sign up for our newsletter and be the first to know about coupons and special promotions.
+                    </p>
+                    <input type="email" placeholder="Enter Your email Address">
+                </div>
+                <div id="ourpolicies">
+                    <p class="linkHeading">Our Policies</p>
+                    <a href="" class="aboutUsLinks">Shipping & Payment</a>
+                    <a href="" class="aboutUsLinks">General & Returns and Exchange Policy/a>
+                    <a href="" class="aboutUsLinks">Terms & Conditions</a>
+                    <a href="" class="aboutUsLinks">Privacy & Policy</a>
+                </div>
+            </div>
+            <div id="copyrightText">
+                <small>
+                    © 2021 Royal Enfield. All rights reserved.| MRP wherever mentioned is inclusive of all taxes.
+                </small>
+                <div id="socialIcons">
+                    Follow Us 
+                    <a href="https://www.facebook.com/royalenfield" class="socialLink"><i class="fa-brands fa-facebook"></i></a>  
+                    <a href="https://twitter.com/royalenfield" class="socialLink"><i class="fa-brands fa-twitter"></i></a> 
+                    <a href="https://www.instagram.com/royalenfieldlifestyle/" class="socialLink"><i class="fa-brands fa-instagram"></i></a> 
+                    <a href="https://www.youtube.com/channel/UCyxUUHqmz9IiAnrROJc0mag" class="socialLink"><i class="fa-brands fa-youtube"></i></a> 
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+<script>
+    document.querySelector("#like").addEventListener("click", function(){
+        document.querySelector(".likebtn").style.color = "green";
+        document.querySelector(".dislikebtn").style.color = "black";
+    })
+
+    document.querySelector("#dislike").addEventListener("click", function(){
+        document.querySelector(".dislikebtn").style.color = "red";
+        document.querySelector(".likebtn").style.color = "black";
+    })
+</script>
