@@ -10,5 +10,5 @@ Some features we developed in our project:
 1. Landing page
 2. Log-in and Sign-up for users 
 3. Developed the Royal Enfield Jackets Section
-4. Branded Merchandise Shopping - from viewing products to complete payment option
+4. Branded Merchandise Shopping - from viewing products to complete payment option.
 
