@@ -741,7 +741,7 @@ html{
 
 /* CSS MEDIA QUERIES */
 
-@media all and (max-width: 400px){
+@media all and (max-width: 800px){
 
     /* JOURNEY DIV */
 
