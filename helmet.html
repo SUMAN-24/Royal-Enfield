@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helmets Online – Buy Helmets For Bike | Royal Enfield Store</title>
+    <link rel="icon" type="image/x-icon" href="https://store.royalenfield.com/media/favicon/stores/1/favicon-128x128.png">
+    <script src="https://kit.fontawesome.com/8d91ab7046.js" crossorigin="anonymous"></script>
+    <style>
+        /* NAVBAR STYLING */
+#navbar{
+    /* width: 100%; */
+    height: 85px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: space-around;
+    /* border: 2px solid red; */
+    box-sizing: border-box;
+    /* position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black; */
+}
+
+/* #main{
+    margin-top: 10px;
+} */
+
+/* #navbar > div{
+    border: 1px solid blue;
+} */
+
+#menu{
+    width: 5%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+#menu a, #menu a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+#logo{
+    width: 34%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: right;
+}
+
+#logo img{
+    filter: invert(1);
+}
+
+#userArea{
+    width: 20%;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.icons{
+    display: inline-block;
+    margin-left: 15px;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+.icontxt{
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    /* border: 1px solid blue; */
+}
+/* a.userAreaIcons{
+    
+} */
+
+#userArea>a, #userArea > a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+
+/*TOP CART PROPERTIES*/
+#topCart{
+    position: relative;
+}
+
+#totalCartItems{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #eb0b0b;
+    top: 0;
+    left: 50%;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+/* helmet BANNER AREA */
+
+#bannerArea{
+    /* top: 85px; */
+    position: relative;
+}
+
+#banner > img{
+    width: 100%;
+}
+
+#bannerText{
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    width: 35%;
+    background-color: rgba(255,255,255,.6);;
+    box-sizing: border-box;
+    padding: 20px;
+    opacity: 0.75;
+    /* border: 2px solid red; */
+}
+
+#bannerText > h1{
+    font-size: 36px;
+    font-weight: 700;
+    font-family: Arial black;
+}
+
+/* CATEGORY HEADER */
+#categoryHeader{
+    width: 100%;
+    height: 50px;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#categoryHeader a, span, p{
+    font-size: 12px;
+}
+
+#historyLinks{
+    width: 80%;
+    margin: auto;
+}
+
+#categoryHeader a{
+    text-decoration: none;
+    color: black;
+}
+
+#categoryHeader a:hover{
+    text-decoration:underline;
+}
+
+.currentPage{
+    display: inline-block;
+}
+
+/* FOOTER AREA */
+
+#iconsPolicy{
+    width: 100%;
+    height: 90px;
+    margin-top: 30px;
+    padding: 1px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ebebeb;
+}
+
+#iconsPolicy > div{
+    width: 10%;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    height: 100%;
+    padding: 10px;
+}
+
+.iconAdd{
+    text-align: center;
+    font-size: 32px;
+}
+
+#iconsPolicy > div > p{
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+}
+
+#footerMain{
+    width: 100%;
+    background-color: black;
+    height: 400px;
+    /* display: flex;
+    align-items: center; */
+}
+
+#footerLinks{
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+#footerLinks > div{
+    /* border: 1px solid blue; */
+    height: 100%;
+    margin-top: 5%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#aboutus{
+    width: 15%;
+}
+
+
+
+.aboutUsLinks{
+    display: block;
+    color: grey;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.aboutUsLinks, .aboutUsLinks:hover{
+    text-decoration: none;
+    color: grey;
+}
+
+#store{
+    width: 25%;
+}
+
+
+
+a.order{
+    display: block;
+    border: 1px solid grey;
+    margin-bottom: 10px;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.order, a.order:hover{
+    text-decoration: none;
+    color: grey;
+}
+
+#keeptouch{
+    width: 25%;
+}
+
+#keeptouch p:nth-child(2){
+    color: grey;
+    font-size: 14px;
+}
+
+
+#keeptouch input{
+    width: 100%;
+    background-color: black;
+    border: 0px;
+    outline: 1px solid grey;
+    height: 15%;
+    padding: 5px;
+    color: grey;
+}
+
+#ourpolicies{
+    width: 20%;
+}
+
+#ourpolicies p{
+    color: white;
+
+}
+
+.linkHeading{
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#keeptouch > p:nth-child(2){
+    margin-bottom: 10px;
+}
+
+#copyrightText{
+    width: 80%;
+    height: 10%;
+    margin: auto;
+    /* border: 1px solid red; */
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#copyrightText small{
+    color: grey;
+    font-size: 11px;
+}
+
+#socialIcons{
+    color: white;
+}
+
+#socialIcons i{
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+}
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="menu">
+            <a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="45" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg>
+            </a>
+        </div>
+        <div id="logo">
+            <a href="">
+                <img src="https://store.royalenfield.com/media/logo/stores/1/logo.png" alt="Royal Enfield Store">
+            </a>
+        </div>
+        <div id="userArea">
+            <a href="" class="userAreaIcons">
+                <div class="icons">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                </div>
+                <div class="icontxt">Search</div>
+            </a>
+            <a href="" class="userAreaIcons">
+                <div class="icons">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                      </svg>
+                </div>
+                <div class="icontxt">Login</div>
+            </a>
+            <a href="shopping_cart.html" class="userAreaIcons">
+                <div class="icons" id="topCart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                      </svg>
+                    <div id="totalCartItems">
+                        0
+                    </div>
+                </div>
+            </a>          
+        </div>
+    </div>
+
+    <div id="main">  
+
+        <!-- PRODUCTS MAIN BANNER -->
+
+        <div id="bannerArea">
+            <div id="banner">
+                <img src="https://store.royalenfield.com/media/catalog/category/L2-banner-new-1920x409_helmet.jpg" alt="Riding Jacket Banner">
+            </div>
+            <div id="bannerText">
+                <h1>HELMETS</h1>
+                <p>Classic designs meet modern technology.</p>
+            </div>
+        </div>
+
+        <div id="categoryHeader">
+            <div id="historyLinks">
+                <a href="" class="homePageLink">Home </a>
+                <span>&nbsp; ></span>
+                <a href="" class="prevPageLink">Riding Gear</a>
+                <span>&nbsp; ></span>
+                <p class="currentPage">Helmets</p>
+            </div>
+        </div>
+
+         <!-- MAIN PRODUCTS DISPLAY AREA -->
+         <div id="topcontainer">
+            <h3 id="totalResults">Showing 0 results</h3>
+            <div id="displayDiv">
+            </div>
+        </div>
+    </div>
+
+
+
+        <!-- <div id="filterDiv">
+            <div id="filterArea">
+                <p>FILTER <i class="fa-solid fa-filter"></i></p>
+                <div class="filterSelect">
+                    <select name="" id="filterPrice">
+                        <option value="--">Filter By Price</option>
+                        <option value="1000">Below Rs 1000</option>
+                        <option value="2000">Rs 1000 - Rs 2000</option>
+                        <option value="5000">Rs 2000 - Rs 5000</option>
+                        <option value="10000">Rs 5000 - Rs 10000</option>
+                        <option value="11000">Above Rs 10000</option>
+                    </select>
+                </div>
+                <div class="filterSelect">
+                    <select name="" id="filterSize">
+                        <option value="--">Filter By Size</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                </div>
+            </div>
+            <div id="sortArea">
+                <p>SORT ITEMS <i class="fa-solid fa-sort"></i> </p>
+                <div class="filterSelect">
+                    <select name="" id="sorter">
+                        <option value="--">Sort By</option>
+                        <option value="pLTH">Price: Low To High</option>
+                        <option value="pHTL">Price: High To Low</option>
+                        <option value="nAZ">Name: A-Z</option>
+                        <option value="nZA">Name: Z-A</option>
+                    </select>
+                </div>
+            </div>
+            <div id="reset">
+                <button id="resetFilters">
+                    RESET
+                </button>
+            </div>
+        </div> -->
+
+        <!-- FOOTER AREA -->
+    <footer>
+        <div id="iconsPolicy">
+            <div>
+                <div class="iconAdd">
+                    <i class="fa-solid fa-plane-departure"></i>
+                </div>
+                <p>Shipping Policy</p>
+            </div>
+            <div>
+                <div class="iconAdd">
+                    <i class="fa-solid fa-rotate"></i>
+                </div>
+                <p>Exchange Policy</p>
+            </div>
+            <div>
+                <div class="iconAdd">
+                    <i class="fa-solid fa-circle-question"></i>
+                </div>
+                <p>FAQ's</p>
+            </div>
+        </div>
+
+        <div id="footerMain">
+            <div id="footerLinks">
+                <div id="aboutus">
+                    <p class="linkHeading">Royal Enfield</p>
+                    <a href="" class="aboutUsLinks">About us</a>
+                    <a href="" class="aboutUsLinks">Motorcycle</a>
+                    <a href="" class="aboutUsLinks">Media & Events</a>
+                    <a href="" class="aboutUsLinks">Career</a>
+                    <a href="" class="aboutUsLinks">Forum</a>
+                    <a href="" class="aboutUsLinks">Contact us</a>
+                </div>
+                <div id="store">
+                    <p class="linkHeading">Bulk Order</p>
+                    <a href="" class="order">
+                        Place a Bulk Order
+                    </a>
+                    <p class="linkHeading">Store Locator</p>
+                    <a href="" class="order">
+                        Find a store
+                    </a>
+                    <p class="linkHeading">Track Order</p>
+                    <a href="" class="order">
+                        Track Your Order
+                    </a>
+                </div>
+                <div id="keeptouch">
+                    <p class="linkHeading">Keep In Touch</p>
+                    <p>
+                        Sign up for our newsletter and be the first to know about coupons and special promotions.
+                    </p>
+                    <input type="email" placeholder="Enter Your email Address">
+                </div>
+                <div id="ourpolicies">
+                    <p class="linkHeading">Our Policies</p>
+                    <a href="" class="aboutUsLinks">Shipping & Payment</a>
+                    <a href="" class="aboutUsLinks">General & Returns and Exchange Policy/a>
+                    <a href="" class="aboutUsLinks">Terms & Conditions</a>
+                    <a href="" class="aboutUsLinks">Privacy & Policy</a>
+                </div>
+            </div>
+            <div id="copyrightText">
+                <small>
+                    © 2021 Royal Enfield. All rights reserved.| MRP wherever mentioned is inclusive of all taxes.
+                </small>
+                <div id="socialIcons">
+                    Follow Us 
+                    <a href="https://www.facebook.com/royalenfield" class="socialLink"><i class="fa-brands fa-facebook"></i></a>  
+                    <a href="https://twitter.com/royalenfield" class="socialLink"><i class="fa-brands fa-twitter"></i></a> 
+                    <a href="https://www.instagram.com/royalenfieldlifestyle/" class="socialLink"><i class="fa-brands fa-instagram"></i></a> 
+                    <a href="https://www.youtube.com/channel/UCyxUUHqmz9IiAnrROJc0mag" class="socialLink"><i class="fa-brands fa-youtube"></i></a> 
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+<script src="/helmet.js"></script>
+<script src="/helmetData.js"></script>
