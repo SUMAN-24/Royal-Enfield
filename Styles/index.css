@@ -1,0 +1,983 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+*{
+    margin: 0px;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+} 
+
+
+/* BODY MAIN DIV STYLE BEGINS */
+
+/* 120 years jounrey div */
+
+#journeyDiv{
+    width: 100%;
+    position: relative;
+}
+
+#journeyDiv > video{
+    width: 100%;
+    height: 100%;
+}
+
+#downArrow{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    color: #ffffff;
+}
+
+#pauseBtn{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    color: #ffffff;
+    font-weight: light; 
+    cursor: pointer;
+}
+
+.smallbuttons{
+    display: none;
+    top: 80%;
+    left: 50%;
+}
+
+#play{
+    display: none;
+}
+/* TRIBUTE DIV */
+
+#tributeDiv{
+    width: 100%;
+    height: 550px;
+    background: linear-gradient(to right,rgba(0,0,0,0.25) 0,rgba(0,0,0,0) 100%);
+    background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/home/banner/desktop/royal-enfield-south-pole.png");
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    margin-top: -8px;
+    display: flex;
+    align-items: center;
+}
+
+
+#knowMore > a{
+    display: inline-block;
+    margin-left: 80px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    padding-right: 20px;
+}
+
+#knowMore > a:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+/* IMAGE CAROUSAL */
+
+/* To change indicators to circle */
+.carousel .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    margin-left: 15px;
+    border-radius: 100%;
+}
+
+/* To change active indicator color to red */
+.carousel .carousel-indicators .active{
+    background-color: #d1291c;
+}
+
+.carousel-item a{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    padding-right: 20px;
+    position: absolute;
+}
+
+.carousel-item a:hover{
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+}
+
+.slide{
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+    position: relative;
+}
+
+.slide1{
+    background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/accessories/banner/campaign/slip-on-silencer.jpg");
+}
+
+.slide1 > a{
+    top: 45%;
+    left: 10%;
+}
+
+.slide2{
+    background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/home/banner/desktop/royal-enfield-hfi.png");
+}
+
+.slide2 > a{
+    top: 80%;
+    left: 45%;
+}
+
+.slide3{
+    background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/motorcycles/classic-350/home/bereborn-homepage.png");
+}
+
+.slide3 > a{
+    top: 45%;
+    left: 70%;
+}
+
+.slide4{
+    background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/home/banner/desktop/gtcup-home.jpg");
+}
+
+.slide4 > a{
+    top: 50%;
+    left: 45%;
+}
+
+.slide5{
+    background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/home/banner/desktop/miy-riding-jacket.jpg");
+}
+
+.slide5 > a{
+    top: 45%;
+    left: 10%;
+}
+
+.slide6{
+    background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/motorcycles/classic-350/podcast/homepage-podcast.jpg");
+}
+
+.slide6 > h2{
+    position: absolute;
+    width: 30%;
+    color: #ffffff;
+    top: 30%;
+    left: 60%;
+}
+
+.slide6 > p{
+    position: absolute;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    top: 47%;
+    left: 60%;
+}
+
+.slide6 > a{
+    top: 53%;
+    left: 60%;
+}
+
+.slide7{
+    background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/motorcycles/classic-350/home/royal-enfield-timeless-classic.png");
+}
+
+.slide7 > a{
+    top: 80%;
+    left: 45%;
+}
+
+.slide8{
+    background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/home/banner/desktop/interceptor-homepage.jpg");
+}
+
+.slide8 > a{
+    top: 50%;
+    left: 45%;
+}
+
+.slide9{
+    background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/home/banner/desktop/continental-gt-homepage.jpg");
+}
+
+.slide9 > a{
+    top: 50%;
+    left: 45%;
+}
+
+.slide10{
+    background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/home/banner/desktop/meteor.jpg");
+}
+
+.slide10 > a{
+    top: 45%;
+    left: 10%;
+}
+
+.slide11{
+    background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/home/banner/desktop/royal-enfield-himalayan-motorcycle.jpg");
+}
+
+.slide11 > img{
+    position: absolute;
+    width: 300px;
+    height: 85px;
+    top: 30%;
+    left: 9%;
+}
+
+/* .slide11 > p{
+    position: absolute;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    top: 48%;
+    left: 10%;
+} */
+
+.slide11 > a{
+    top: 55%;
+    left: 11%;
+}
+
+
+
+/* NEWS GRID AREA */
+
+#newsGrid{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    /* border: 1px solid red; */
+}
+
+/* #newsGrid > div{
+    border: 1px solid blue;
+} */
+
+.newsItem{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.newsImage{
+    width: 100%;
+}
+
+.newsImage:hover{
+    transition: all ease 1s;
+    transform: scale(1.1);
+}
+
+.newsText{
+    position: absolute;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    bottom: 2%;
+}
+
+
+
+
+/* AYUSH PART */
+
+/* MOTORCYCLES DIV */
+
+#motorcycles{
+    box-sizing: border-box;
+    display:flex;
+    background-color: #212121;
+    /* border: 1px solid red; */
+    height: 60px;
+    justify-content: flex-start;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+    color: white;
+    align-items: center;
+}
+#motorcycles>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+   
+}
+#motorcycles>div:nth-child(2){
+    font-size: 20px;
+    padding: 18px;
+    font-weight: bolder;
+}
+
+.smallscreen{
+    display: none;
+}
+
+#motorcyclesDiv{
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+#motorcyclesDiv img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+}
+
+#motorcyclesDiv a{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    padding-right: 20px;
+    position: absolute;
+    left: 5%;
+    top: 45%;
+    text-decoration: none;
+}
+
+#motorcyclesDiv a:hover{
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+}
+
+
+
+/* RIDES DIV */
+
+#rides{
+    box-sizing: border-box;
+    display:flex;
+    background-color: #212121;
+    /* border: 1px solid red; */
+    height: 60px;
+    justify-content: flex-start;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+    color: white;
+    align-items: center;
+}
+#rides>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+   
+}
+#rides>div:nth-child(2){
+    font-size: 20px;
+    padding: 18px;
+    font-weight: bolder;
+}
+
+
+#ridesDiv{
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+#ridesDiv img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+}
+
+#ridesDiv a{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    padding-right: 20px;
+    position: absolute;
+    left: 5%;
+    top: 80%;
+    text-decoration: none;
+}
+
+#ridesDiv a:hover{
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+}
+
+
+/* APPAREL DIV */
+
+#apparel{
+    box-sizing: border-box;
+    display:flex;
+    background-color: #212121;
+    /* border: 1px solid red; */
+    height: 60px;
+    justify-content: flex-start;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+    color: white;
+    align-items: center;
+}
+#apparel>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+   
+}
+#apparel>div:nth-child(2){
+    font-size: 20px;
+    padding: 18px;
+    font-weight: bolder;
+}
+
+
+#apparelDiv{
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+#apparelDiv img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(70%);
+}
+
+#apparelDiv a{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    padding-right: 20px;
+    position: absolute;
+    left: 5%;
+    top: 80%;
+    text-decoration: none;
+}
+
+#apparelDiv a:hover{
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+}
+
+
+/* ACCESORIES DIV */
+
+/* SUNIL PART */
+#accessories{
+    box-sizing: border-box;
+    display:flex;
+    background-color: #212121;
+    /* border: 1px solid red; */
+    height: 60px;
+    justify-content: flex-start;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+    color: white;
+    align-items: center;
+}
+#accessories>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+   
+}
+#accessories>div:nth-child(2){
+    font-size: 20px;
+    padding: 18px;
+    font-weight: bolder;
+}
+
+.access{
+    margin-left: 20px;
+}
+.access>a{
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.access>a:hover{
+    color: #d1291c;
+    text-decoration: none;
+}
+
+#accessoriesDiv{
+    width: 100%;
+    height: 550px;
+    position: relative;
+}
+
+#accessoriesDiv img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+}
+
+#accessoriesDiv a{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    padding-right: 20px;
+    position: absolute;
+    left: 5%;
+    top: 45%;
+    text-decoration: none;
+}
+
+#accessoriesDiv a:hover{
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+}
+
+
+
+/* LOCATE US DIV */
+#locateUsNav{
+    box-sizing: border-box;
+    display:flex;
+    background-color: #212121;
+    /* border: 1px solid red; */
+    height: 60px;
+    justify-content: flex-start;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+    color: white;
+    align-items: center;
+}
+
+#locateUsNav>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+   
+}
+#locateUsNav>div:nth-child(2){
+    font-size: 20px;
+    padding: 18px;
+    font-weight: bolder;
+}
+
+
+#storesDiv{
+    width: 100%;
+    height: 550px;
+    position: relative;
+}
+
+#storesDiv img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+}
+
+#storesDiv h3{
+    color: #fff;
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+}
+
+#storesDiv a{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    padding-right: 20px;
+    position: absolute;
+    left: 5%;
+    top: 55%;
+    text-decoration: none;
+}
+
+#storesDiv a:hover{
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+}
+
+
+
+/* POPULAR TAGS DIV */
+
+#popularTagsHeading{
+    box-sizing: border-box;
+    background-color: #212121;
+    /* border: 1px solid red; */
+    height: 50px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#popularTagsHeading h4{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#popularImgDiv{
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* margin-bottom: 40px; */
+}
+
+.popimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    position: relative;
+}
+
+.poptext{
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.poptext:hover{
+    color: #d1291c;
+    text-decoration: none;
+}
+.popimg1{
+    background-image: url("https://www.royalenfield.com/node/assets/locobuzz/162428582167017912534488757785_1.jpg");
+}
+
+.popimg2{
+    background-image: url("https://www.royalenfield.com/node/assets/locobuzz/162385382438018229864327060339_1.jpg");
+}
+
+.popimg3{
+    background-image: url("https://www.royalenfield.com/node/assets/locobuzz/164242994320417943901948701420_17841401461094006_1.jpg");
+}
+
+.popimg4{
+    background-image: url("https://www.royalenfield.com/node/assets/locobuzz/158635623892217886812278517660_IMAGE.jpg");
+}
+
+.instaHandle{
+    box-sizing: border-box;
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    /* background-color: black; */
+    background: rgba(0,0,0, 0.7);
+    color: white;
+    top: 90%;
+    text-align: right;
+    padding: 10px;
+    /* filter: opacity(0.5); */
+}
+
+.instaHandle a{
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.instaHandle a:hover{
+    color: #d1291c;
+    text-decoration: none;
+}
+
+.instaHandle i{
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+
+
+
+
+/* CSS MEDIA QUERIES */
+
+@media all and (max-width: 400px){
+
+    /* JOURNEY DIV */
+
+    .bigbuttons{
+        display: none;
+    }
+
+    .smallbuttons{
+        display: block;
+    }
+
+    /* TRIBUTE DIV */
+
+    #tributeDiv{
+        background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/home/banner/mobile/royal-enfield-south-pole.png");   
+        background-size: cover;
+        height: 450px;
+        cursor: pointer;
+    }
+
+    #knowMore{
+        display: none;
+    }
+
+
+    /* IMAGE CAROUSEL */
+
+    .carousel .carousel-indicators li {
+        width: 8px;
+        height: 8px;
+    }
+
+    .carousel-item a{
+        display: none;
+    }
+
+    .slide{
+        cursor: pointer;
+        background-size: cover;
+        height: 450px;
+    }
+
+    .slide1{
+        background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/accessories/banner/campaign/slip_on_silencer.jpg");    
+    }
+
+    .slide2{
+        background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/home/banner/mobile/royal_enfield_hfi.png");
+    }
+
+    .slide3{
+        background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/motorcycles/classic-350/home/classic_350_home.png");
+    }
+
+    .slide4{
+        background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/home/banner/mobile/gtcup_home.jpg");
+    }
+
+    .slide5{
+        background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/home/banner/mobile/miy_riding_jacket.jpg");
+    }
+
+    .slide6{
+        background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/motorcycles/classic-350/podcast/homepage_podcast.jpg");
+    }
+
+    .slide6 h2, p{
+        display: none;
+    }
+
+    .slide7{
+        background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/motorcycles/classic-350/home/royal_enfield_timeless_classic.png");
+    }
+
+    .slide8{
+        background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/home/banner/mobile/interceptor_homepage.jpg");
+    }
+
+    .slide9{
+        background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/home/banner/mobile/continental_gt_homepage.jpg");
+    }
+
+    .slide10{
+        background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/home/motorcycles/mobile/meteor.jpg");
+    }
+    
+    .slide11{
+        background-image: url("https://www.royalenfield.com/content/dam/royal-enfield/india/home/motorcycles/mobile/royal_enfield_himalayan_motorcycle.jpg");
+    }
+
+
+    /* NEWS GRID AREA */
+
+    #newsGrid{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .newsText{
+        font-size: 13px;
+        line-height: 12px;
+    }
+
+    /* MOTORCYCLES AREA*/
+
+    #motorcyclesDiv{
+        height: 450px;
+    }
+
+    #motorcycles div{
+        display: none;
+    }
+
+    .bigscreen{
+        display: none;
+    }
+
+    .smallscreen{
+        display: block;
+    }
+
+    #motorcycles div:first-child{
+        display: block;
+    }
+
+    #motorcycles div:nth-child(2){
+        display: block;
+    }
+
+    #motorcycles div:nth-child(3){
+        display: block;
+    }
+
+    #motorcyclesDiv a{
+        top: 80%;
+        left: 38%;
+        font-size: 11px;
+    }
+
+
+    /*RIDES DIV*/
+    #ridesDiv{
+        height:450px;
+    }
+
+    #ridesDiv a{
+        top: 80%;
+        left: 38%;
+        font-size: 11px;
+    }
+
+    /*APPAREL DIV*/
+
+    
+
+    #apparel > div{
+        display: none;
+    }
+
+    #apparel div:nth-child(2){
+        display: block;
+    }
+
+    #apparel div:nth-child(3){
+        display: block;
+    }
+
+    #apparelDiv{
+        height: 450px;
+    }
+
+    #apparelDiv a{
+        display: none;
+    }
+
+    /* ACCESSORIES DIV */
+
+    #accessories div{
+        display: none;
+    }
+
+    #accessories div:nth-child(2){
+        display: block;
+    }
+
+    #accessories div:nth-child(3){
+        display: block;
+    }
+
+    #accessoriesDiv{
+        height: 450px;
+    }
+
+    #accessoriesDiv a{
+        display: none;
+    }
+
+
+    /*LOCATE US DIV*/
+
+    #locateUsNav div{
+        display: none;
+    }
+
+    #locateUsNav div:nth-child(2){
+        display: block;
+    }
+
+    #locateUsNav div:nth-child(3){
+        display: block;
+    }
+
+    #storesDiv{
+        height: 450px;
+    }
+
+    #storesDiv a{
+        display: none;
+    }
+
+    #storesDiv h3{
+        top: 85%;
+        font-size: 20px;
+    }
+
+
+    /*POPULAR TAGS DIV*/
+
+    #popularImgDiv{
+        grid-template-columns: 1fr;
+    }
+
+    .popimg:not(:first-child){
+        display: none;
+    }
+
+}
+
+
