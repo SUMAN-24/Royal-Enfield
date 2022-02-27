@@ -374,3 +374,46 @@ a.explore:hover{
     top: 52%;
 }
 
+
+
+
+
+/* MEDIA QUERIES */
+
+@media all and (max-width: 800px){
+    #galleryContainer{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50% 50%;
+    }
+
+    #personaliseStory p, #smoothStory p, #recommendedDiv p, #performanceStory p, #easygoStory p, #interceptorStory p{
+        display: none;
+    }
+
+    #reviewImgBanner > a{
+        top: 80%;
+        left: 35%;
+    }
+
+    #buttons{
+        display: none;
+    }
+
+}
+
+
+@media all and (min-width: 50px) and (max-width: 500px){
+    #reviewImgBanner > a{
+        top: 80%;
+        left: 30%;
+    }
+
+    #headerLinks > div{
+        display: none;
+    }
+
+    #headerLinks > div:first-child{
+        display: block;
+        text-align: center;
+    }
+}

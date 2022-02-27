@@ -398,10 +398,7 @@ ul{
     /* FOOTER MEDIA QUERIES*/
 
     #footerIconsDiv{
-        height: 250px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
+       display: none;
     }
 
     #footerIconsDiv > .footerIcons{
@@ -432,6 +429,13 @@ ul{
         color: #d1291c;
     }
 
+}
+
+@media all and (min-width: 401px) and (max-width: 800px){
+    #footerIconsDiv{
+        display: none;
+     }
+ 
 }
 
 

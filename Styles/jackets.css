@@ -618,13 +618,18 @@ a.order, a.order:hover{
     } */
 
     #displayDiv{
+        width: 100%;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 350px;
     }
 
+    .prodDiv:hover > .prodInfoCart{
+        top: 60%;
+    }
+
     .sizeSelector{
-        width: 40%;
-        grid-template-columns: repeat(3, 1fr);
+        width: 50%;
+        grid-template-columns: repeat(4, 1fr);
         grid-auto-rows: auto;
     }
 
