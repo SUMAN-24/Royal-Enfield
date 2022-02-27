@@ -17,6 +17,7 @@ function formSubmit(event) {
         if ((regdUsers[i].Email== user || regdUsers[i].Mobile==user ) && regdUsers[i].Password== pass) {
             check=true;
             alert("Login Successful. Welcome back " + regdUsers[i].Fname + "!");
+            window.location.href = "index.html";
         }
     }
 

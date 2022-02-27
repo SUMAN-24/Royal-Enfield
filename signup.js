@@ -105,6 +105,16 @@
                             {
                                 signUpDataArray.push(obj)
                                 localStorage.setItem("signUpdataBase",JSON.stringify(signUpDataArray))
+                                fname.value=""
+                                Lnam.value=""
+                                doB.value=""
+                                email.value=""
+                                password.value=""
+                                country.value="Select country"
+                                phone.value=""
+
+                                alert("Account created successfully.")
+                                window.location.href = "login.html"
                             }
                             else
                             {
@@ -117,12 +127,6 @@
                         }
                     }
 
-                    fname.value=""
-                   Lnam.value=""
-                   doB.value=""
-                   email.value=""
-                  password.value=""
-                  country.value="Select country"
-                 phone.value=""
+                    
 
                 })
