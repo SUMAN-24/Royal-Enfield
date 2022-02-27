@@ -321,6 +321,14 @@ input[type=number]::-webkit-outer-spin-button {
         grid-gap: 30px;
     }
 
+    .method{
+        width: 100%;
+    }
+
+    .method p{
+        font-size: 14px;
+    }
+
 }
 
 
