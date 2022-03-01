@@ -760,6 +760,7 @@ html{
         background-size: cover;
         height: 450px;
         cursor: pointer;
+        margin-top: -10px;
     }
 
     #knowMore{
