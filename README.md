@@ -7,7 +7,7 @@ Royal Enfield is an Indian motorcycle manufacturing company, popularly known for
 
 ## Deployed Site  
 
-https://royalenfieldclone.netlify.app/
+https://royal-enfield-clone.netlify.app
 
 
 
